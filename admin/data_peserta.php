@@ -119,6 +119,20 @@
                             <span>Form Pendaftaran PKL</span></a>
                     </li>
 
+                
+                    <li class="nav-item">
+                        <a class="nav-link" href="pengumuman.php">
+                            <i class="fas fa-fw fa-table"></i>
+                            <span>Kelola Pengumuman</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="users.php">
+                            <i class="fas fa-fw fa-table"></i>
+                            <span>Kelola Akun</span></a>
+                    </li>
+
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -223,7 +237,10 @@
                                          <!-- Button trigger modal -->
 
 
-
+                                         <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                                        Tambah Peserta 
+                                        </button>
                 
                     </div>
                     <a href="export_daftar.php" class="d-sm-inline-block btn btn-sm btn-success shadow-sm"><i
@@ -232,8 +249,10 @@
    
 
 
+
+
 <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
@@ -243,14 +262,94 @@
                 </button>
             </div>
             <div class="modal-body">
-            
+            <form method="POST" action="pendaftaran/tambah_pendaftaran.php" enctype="multipart/form-data" >
+                        <section class="base align-items-center ">
+
+                            <div class="row mb-3">
+                            <label for="nim" class="col-sm-2 col-form-label">NIM</label>
+                            <div class="col-sm-8">
+                            <input type="text" class="form-control" name="nim" autofocus=""  />
+                            </div>
+                            </div>
+                            
+                            <div class="row mb-3">
+                            <label for="Nama" class="col-sm-2 col-form-label">Nama</label>
+                            <div class="col-sm-8">
+                            <input type="text" class="form-control" name="nama_mhs"  autofocus=""  />
+                            </div>
+                            </div>
+
+                            
+                            <div class="row mb-3">
+                            <label for="nohp_mhs" class="col-sm-2 col-form-label">NO HP</label>
+                            <div class="col-sm-8">
+                            <input type="text" class="form-control" name="nohp_mhs"   />
+                            </div>
+                            </div>
+
+                            <div class="row mb-3">
+                            <label for="Prodi" class="col-sm-2 col-form-label">Prodi</label>
+                            <div class="col-sm-8">
+                            <input type="text" class="form-control" name="prodi"  />
+                            </div>
+                            </div>
+
+                            
+                            <div class="row mb-3">
+                            <label for="nama_pem" class="col-sm-2 col-form-label">Nama Pembimbing</label>
+                            <div class="col-sm-8">
+                            <input type="text" class="form-control" name="nama_pem" required=""  />
+                            </div>
+                            </div>
+
+                            <div class="row mb-3">
+                            <label for="nohp_pem" class="col-sm-2 col-form-label">No HP Pembimbing</label>
+                            <div class="col-sm-8">
+                            <input type="text" class="form-control" name="nohp_pem"  />
+                            </div>
+                            </div>
+
+                            <div class="row mb-3">
+                            <label for="nama_inst" class="col-sm-2 col-form-label">Nama Instansi</label>
+                            <div class="col-sm-8">
+                            <input type="text" class="form-control" name="nama_inst"  />
+                            
+                            </div>
+                            </div>
+
+                            <div class="row mb-3">
+                            <label for="alamat_inst" class="col-sm-2 col-form-label">Alamat</label>
+                            <div class="col-sm-8">
+                            <input type="text" class="form-control" name="alamat_inst" />
+                            </div>
+                            </div>
+
+               
+
+                            <div class="row mb-3">
+                            <label for="nohp_inst" class="col-sm-2 col-form-label">No Telp</label>
+                            <div class="col-sm-8">
+                            <input type="text" class="form-control" name="nohp_inst" />
+                            </div>
+                            </div>
+
+      
+                            
+                        </section>
+                        
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                <button type="submit" name="simpan" class="btn btn-primary">Simpan</button>
+            </div>
+            </form>
             </div>
         </div>
         </div>
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Kode Daftar</th>
+            
                                             <th>Nama Mahasiswa</th>
                                             <th>NIM</th>
                                             <th>No HP Mahasiswa</th>
@@ -267,7 +366,7 @@
                                     <tfoot>
                                         <tr>
                                         <th>No</th>
-                                            <th>Kode Daftar</th>
+                                            
                                             <th>Nama Mahasiswa</th>
                                             <th>NIM</th>
                                             <th>No HP Mahasiswa</th>
@@ -301,7 +400,7 @@
                                     ?>
                                     <tr>
                                         <td><?php echo $no; ?></td>
-                                        <td><?php echo $row['kode_daftar']; ?></td>
+                                        
                                         <td><?php echo $row['nama_mhs']; ?></td>
                                         <td><?php echo $row['nim']; ?></td>
                                         <td><?php echo $row['nohp_mhs']; ?></td>
@@ -314,6 +413,107 @@
                                         
        
                                         <td>
+                                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id_daftar'];?>">
+                            Ubah
+                            </button>
+   
+        <div class="modal fade" id="exampleModal<?php echo $row['id_daftar'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit Mahasiswa</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            <form method="POST" action="pendaftaran/edit_pendaftaran.php" enctype="multipart/form-data" >
+            
+                        <section class="base align-items-center ">
+                        <div>
+                            <input type="hidden" value="<?php echo $row['id_daftar']; ?>" name="id_daftar" required="" />
+                        </div>
+                        <div class="row mb-3">
+                        <label for="Nama" class="col-sm-2 col-form-label">Nama</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" value="<?php echo $row['nama_mhs']; ?>" name="nama_mhs" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="No CE" class="col-sm-2 col-form-label">NIM</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" value="<?php echo $row['nim']; ?>"  name="nim" required="" />
+                        </div>
+                        </div>
+                        
+        
+                        
+                        <div class="row mb-3">
+                        <label for="Alamat" class="col-sm-2 col-form-label">NO HP</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" value="<?php echo $row['nohp_mhs']; ?>" name="nohp_mhs" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="Prodi" class="col-sm-2 col-form-label">Prodi</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" value="<?php echo $row['prodi']; ?>" name="prodi" required="" />
+                        </div>
+                        </div>
+
+                        
+                        <div class="row mb-3">
+                            <label for="nama_pem" class="col-sm-2 col-form-label">Nama Pembimbing</label>
+                            <div class="col-sm-8">
+                            <input type="text" class="form-control" value="<?php echo $row['nama_pem']; ?>"  name="nama_pem" required=""  />
+                            </div>
+                            </div>
+
+                            <div class="row mb-3">
+                            <label for="nohp_pem" class="col-sm-2 col-form-label">No HP Pembimbing</label>
+                            <div class="col-sm-8">
+                            <input type="text" class="form-control" value="<?php echo $row['nohp_pem']; ?>"  name="nohp_pem"  />
+                            </div>
+                            </div>
+
+                            <div class="row mb-3">
+                            <label for="nama_inst" class="col-sm-2 col-form-label">Nama Instansi</label>
+                            <div class="col-sm-8">
+                            <input type="text" class="form-control" value="<?php echo $row['nama_inst']; ?>"  name="nama_inst"  />
+                            
+                            </div>
+                            </div>
+
+                            <div class="row mb-3">
+                            <label for="alamat_inst" class="col-sm-2 col-form-label">Alamat</label>
+                            <div class="col-sm-8">
+                            <input type="text" class="form-control" value="<?php echo $row['alamat_inst']; ?>" name="alamat_inst" />
+                            </div>
+                            </div>
+
+               
+
+                            <div class="row mb-3">
+                            <label for="nohp_inst" class="col-sm-2 col-form-label">No Telp</label>
+                            <div class="col-sm-8">
+                            <input type="text" class="form-control" value="<?php echo $row['nohp_inst']; ?>"  name="nohp_inst" />
+                            </div>
+                            </div>
+
+
+           
+
+                        </section>
+                        
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                <button type="submit" class="btn btn-primary">Simpan</button>
+            </div>
+            </form>
+            </div>
         </div>
         </div>
                                         |

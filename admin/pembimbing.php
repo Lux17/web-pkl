@@ -118,6 +118,20 @@
                             <span>Form Pendaftaran PKL</span></a>
                     </li>
 
+                
+                    <li class="nav-item">
+                        <a class="nav-link" href="pengumuman.php">
+                            <i class="fas fa-fw fa-table"></i>
+                            <span>Kelola Pengumuman</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="users.php">
+                            <i class="fas fa-fw fa-table"></i>
+                            <span>Kelola Akun</span></a>
+                    </li>
+
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -279,7 +293,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                <button type="submit" class="btn btn-primary">Simpan</button>
+                <button type="submit" name = "simpan" class="btn btn-primary">Simpan</button>
             </div>
             </form>
             </div>

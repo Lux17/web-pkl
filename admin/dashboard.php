@@ -101,6 +101,18 @@ session_start();
                             <span>Form Pendaftaran PKL</span></a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="pengumuman.php">
+                            <i class="fas fa-fw fa-table"></i>
+                            <span>Kelola Pengumuman</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="users.php">
+                            <i class="fas fa-fw fa-table"></i>
+                            <span>Kelola Akun</span></a>
+                    </li>
+
             <!-- Nav Item - Charts -->
    
             

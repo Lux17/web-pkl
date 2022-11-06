@@ -1,26 +1,32 @@
 <?php
-  include('../koneksi.php'); 
-  session_start();
-  
+    include('../koneksi.php'); 
+    
+    error_reporting(0); //tambahkan ini
+    //jika kita klik cari, maka yang tampil query cari ini
+    if(isset($_GET['kata_cari'])) {
+    //menampung variabel kata_cari dari form pencarian
+	$kata_cari = $_GET['kata_cari'];
 
-  // mengecek apakah di url ada nilai GET id
-  if (isset($_GET['id_daftar'])) {
-    // ambil nilai id dari url dan disimpan dalam variabel $id
-    $id_daftar = ($_GET["id_daftar"]);
+	//jika hanya ingin mencari berdasarkan kode_produk, silahkan hapus dari awal OR
+	//jika ingin mencari 1 ketentuan saja query nya ini : SELECT * FROM produk WHERE kode_produk like '%".$kata_cari."%' 
+	$query = "SELECT * FROM mahasiswa WHERE nim like '%".$kata_cari."%' ";
+    $result = mysqli_query($kon, $query); 
+    $row = mysqli_fetch_assoc($result);
+    // $d = mysqli_fetch_array($result);  
+    } elseif(isset($_GET['kata_cari2'])) {
+	//jika tidak ada pencarian, default yang dijalankan query ini
+	$kata_cari = $_GET['kata_cari2'];
 
-    // menampilkan data dari database yang mempunyai id=$id
-    $query = "SELECT * FROM pendaftaran WHERE id_daftar='$id_daftar'";
-    $result = mysqli_query($kon, $query);
-    // jika data gagal diambil maka akan tampil error berikut
-    if(!$result){
-      die ("Query Error: ".mysqli_errno($kon).
-         " - ".mysqli_error($kon));
-    }
-    // mengambil data dari database
-    $data = mysqli_fetch_assoc($result);
+	//jika hanya ingin mencari berdasarkan kode_produk, silahkan hapus dari awal OR
+	//jika ingin mencari 1 ketentuan saja query nya ini : SELECT * FROM produk WHERE kode_produk like '%".$kata_cari."%' 
+	$query = "SELECT * FROM pendaftaran WHERE kode_daftar like '%".$kata_cari2."%' ";
+    $result = mysqli_query($kon, $query); 
+    $row = mysqli_fetch_assoc($result);
+   }else{
 
-  }         
-  ?>
+   };
+
+   ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -222,30 +228,44 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                          <!-- Button trigger modal -->
 
-                        <form method="POST" action="pendaftaran/tambah_pendaftaran.php" enctype="multipart/form-data" >
-                        <section class="base align-items-center ">
-                            
-                        <div class="row mb-3">
+                    <div class="modal-body">
+ 
+                 
+
+            <form method="POST" action="pendaftaran/tambah_pendaftaran.php" enctype="multipart/form-data">
+                                          
+            <div class="row mb-3">
+            <section class="base align-items-center ">
                             <label for="kode_daftar" class="col-sm-2 col-form-label">Kode Daftar</label>
                             <div class="col-sm-5">
-                            <input type="text" class="form-control" name="kode_daftar" required="" />
-                            <button type="caridftr" class="btn btn-primary">Cari</button>
+                            <input type="text" class="form-control" name="kode_daftar" />
                             </div>
                             </div>
 
-                        <div class="row mb-3">
-                            <label for="NIM" class="col-sm-2 col-form-label">NIM</label>
+               
+
+                            <!-- <div class="row mb-3">
+                            <label for="NIM" class="col-sm-2 col-form-label" >NIM</label>
                             <div class="col-sm-5">
-                            <input type="text" class="form-control" name="nim" />
-                            <button type="carimhs" class="btn btn-primary">Cari</button>
+                            <form method="GET" action="#" style="text-align: center;">
+                            <input type="text" class="form-control" name="kata_cari" name="kata_cari" value="<?php if(isset($_GET['kata_cari'])) { echo $_GET['kata_cari']; } ?>"  />
+                            <button type="submit" class="btn btn-primary">Cari</button>
+                             </form>
                             </div>
                             </div>
-                        
+                         -->
+
+                            <div class="row mb-3">
+                            <label for="nim" class="col-sm-2 col-form-label">NIM</label>
+                            <div class="col-sm-5">
+                            <input type="text" class="form-control" name="nim" value="<?php echo $row['nim']; ?> " autofocus=""  />
+                            </div>
+                            </div>
                             
                             <div class="row mb-3">
                             <label for="Nama" class="col-sm-2 col-form-label">Nama</label>
                             <div class="col-sm-5">
-                            <input type="text" class="form-control" name="nama_mhs" autofocus="" required=""  />
+                            <input type="text" class="form-control" name="nama_mhs" value="<?php echo $row['nama_mhs']; ?> " autofocus=""  />
                             </div>
                             </div>
 
@@ -253,22 +273,14 @@
                             <div class="row mb-3">
                             <label for="nohp_mhs" class="col-sm-2 col-form-label">NO HP</label>
                             <div class="col-sm-5">
-                            <input type="text" class="form-control" name="nohp_mhs" required="" />
+                            <input type="text" class="form-control" name="nohp_mhs" value="<?php echo $row['nohp_mhs']; ?>"  />
                             </div>
                             </div>
 
                             <div class="row mb-3">
                             <label for="Prodi" class="col-sm-2 col-form-label">Prodi</label>
                             <div class="col-sm-5">
-                            <input type="text" class="form-control" name="prodi" required="" />
-                            </div>
-                            </div>
-
-                            <div class="row mb-3">
-                            <label for="nidn" class="col-sm-2 col-form-label">NIDN</label>
-                            <div class="col-sm-5">
-                            <input type="text" class="form-control" name="nidn" autofocus="" required=""  />
-                            <button type="carinidn" class="btn btn-primary">Cari</button>
+                            <input type="text" class="form-control" name="prodi" value="<?php echo $row['prodi']; ?> " />
                             </div>
                             </div>
 
@@ -276,29 +288,21 @@
                             <div class="row mb-3">
                             <label for="nama_pem" class="col-sm-2 col-form-label">Nama Pembimbing</label>
                             <div class="col-sm-5">
-                            <input type="text" class="form-control" name="nama_pem" required="" />
+                            <input type="text" class="form-control" name="nama_pem" required=""  />
                             </div>
                             </div>
 
                             <div class="row mb-3">
                             <label for="nohp_pem" class="col-sm-2 col-form-label">No HP Pembimbing</label>
                             <div class="col-sm-5">
-                            <input type="text" class="form-control" name="nohp_pem" required="" />
-                            </div>
-                            </div>
-         
-                            <div class="row mb-3">
-                            <label for="kode_inst" class="col-sm-2 col-form-label">Kode Instansi</label>
-                            <div class="col-sm-5">
-                            <input type="text" class="form-control" name="kode_inst" required="" />
-                            <button type="cariinst" class="btn btn-primary">Cari</button>
+                            <input type="text" class="form-control" name="nohp_pem"  />
                             </div>
                             </div>
 
                             <div class="row mb-3">
                             <label for="nama_inst" class="col-sm-2 col-form-label">Nama Instansi</label>
                             <div class="col-sm-5">
-                            <input type="text" class="form-control" name="nama_inst" required="" />
+                            <input type="text" class="form-control" name="nama_inst"  />
                             
                             </div>
                             </div>
@@ -309,6 +313,7 @@
                             <input type="text" class="form-control" name="alamat_inst" />
                             </div>
                             </div>
+
                
 
                             <div class="row mb-3">
@@ -317,19 +322,16 @@
                             <input type="text" class="form-control" name="nohp_inst" />
                             </div>
                             </div>
-                        
-
-
-      
-                            
                         </section>
-                        
-            </div>
-            <div class="modal-footer">
+                        </form>
+
+                        <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                <button type="submit" class="btn btn-primary">Simpan</button>
+                <button type="submit" name="simpan" class="btn btn-primary">Simpan</button>
             </div>
-            </form> 
+            </form>
+            </div>
+                            </div>
 
 
             <!-- End of Main Content -->

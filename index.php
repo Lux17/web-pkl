@@ -46,21 +46,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li class="nav-item">
-            <a class="nav-link" style="color: #348A0C;" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color: #348A0C;" href="#sejarah">Sejarah</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color: #348A0C;" href="#divisi">Divisi</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color: #348A0C;"  href="#galeri">Galeri</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color: #348A0C;" href="#pengurus">Pengurus</a>
-          </li>
+
           <!-- <li class="nav-item ">
             <a class="nav-link" style="color: #348A0C;" href="#artikel">Artikel</a>
           </li> -->
@@ -80,7 +66,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="zoom-out" data-aos-delay="200">
-          <h1 >Selamat Datang di Computer Education</h1>
+          <h1 >Registrasi PKL Mahasiswa</h1>
           <h2 >Membangun Mahasiswa Berteknologi berlandaskan islami</h2>
           <div >
             <div class="text-center text-lg-start">

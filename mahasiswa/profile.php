@@ -48,15 +48,22 @@ session_start();
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item s">
+            <li class="nav-item active">
                 <a class="nav-link" href="dashboard.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
+
             <li class="nav-item active">
                 <a class="nav-link" href="profile.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Profil</span></a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="nilai.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Nilai</span></a>
             </li>
 
             <!-- Divider -->
@@ -140,12 +147,7 @@ session_start();
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                    </div>
-
+     
    
      
                                 <!-- Card Body -->
@@ -154,10 +156,13 @@ session_start();
                             </div>
                         </div>
                         <?php
-                           
+                            $nim = $_SESSION['username'];
+                        
                            // jalankan query untuk menampilkan semua data diurutkan berdasarkan 
-                           $query = "SELECT * FROM pengumuman ORDER BY id_pengumuman ASC";
+                           $query = "SELECT * FROM mahasiswa WHERE nim LIKE '$nim'";
                            $result = mysqli_query($kon, $query);
+
+                           
                            //mengecek apakah ada error ketika menjalankan query
                            if(!$result){
                                die ("Query Error: ".mysqli_errno($kon).
@@ -173,17 +178,52 @@ session_start();
                            ?>
 
                         <!-- Pie Chart -->
-                       
-                        <div class="col-md-6 col-md-6 align-items-center">
+                        
+                        <div class="col">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary"><?php echo $row['judul']; ?></h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Profil</h6>
                                 </div>
                                 <div class="card-body">
-                                    <p><?php echo $row['isi']; ?></p>
-                                    <p class="mb-0">Tanggal :  <?php echo $row['tanggal']; ?></p>
+                                    <p>Nama : <?php echo $row['nama_mhs'];?> </p>
+                                    <p class="mb-0">Tanggal :  <?php echo $row['nim'];?></p>
+                                    <p>Jenis kelamin : <?php echo $row['jk_mhs'];?> </p>
+                                    <p>Nomer HP  : <?php echo $row['nohp_mhs'];?> </p>
+                                    <p>Alamat : <?php echo $row['alamat_mhs'];?> </p>
+                                    <p>Prodi : <?php echo $row['prodi'];?> </p>
+                                    <p>Jumlah Bimbingan : <?php echo $row['jmlh_bimbingan'];?> </p>
+
+                                    <?php
+                                        };
+                                    ?>
+
+                                    <?php
+                                         $nim = $_SESSION['username'];
+                                        
+                                        // jalankan query untuk menampilkan semua data diurutkan berdasarkan 
+                                        $query = "SELECT * FROM pendaftaran WHERE nim LIKE '$nim'";
+                                        $result = mysqli_query($kon, $query);
+
+                                        
+                                        //mengecek apakah ada error ketika menjalankan query
+                                        if(!$result){
+                                            die ("Query Error: ".mysqli_errno($kon).
+                                            " - ".mysqli_error($kon));
+                                        }
+
+                                        //buat perulangan untuk element tabel dari data mahasiswa
+                                        $no = 1; //variabel untuk membuat nomor urut
+                                        // hasil query akan disimpan dalam variabel $data dalam bentuk array
+                                        // kemudian dicetak dengan perulangan while
+                                        while($row = mysqli_fetch_assoc($result))
+                                        {
+                                        ?>
+                                    <p>Pembimbing : <?php echo $row['nama_pem'];?> -</p>
+                                    <?php
+                                        };
+                                    ?>
                                 </div>
                             </div>
                                 <!-- Card Body -->
@@ -192,9 +232,6 @@ session_start();
                         </div>
                     </div>
 
-                    <?php
-                           };
-                    ?>
 
                 </div>
                 <!-- /.container-fluid -->

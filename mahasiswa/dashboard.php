@@ -48,12 +48,21 @@ session_start();
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item ">
                 <a class="nav-link" href="dashboard.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
-
+            <li class="nav-item">
+                <a class="nav-link" href="profile.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Profil</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="nilai.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Nilai</span></a>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
             
@@ -137,171 +146,58 @@ session_start();
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                    
                     </div>
 
-                    <!-- Content Row -->
-                    <div class="row">
-
-                  
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                               Sudah Registrasi PKL</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                           
-                                            
-                                            <?php
-
-                                            $data_dftr = mysqli_query($kon,"SELECT * FROM pendaftaran");
-
-                                            // menghitung data barang
-                                            $jmlh_dftr= mysqli_num_rows($data_dftr);
-
-                                            ?>
-                                            <?php echo $jmlh_dftr; ?>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-  
-                     
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                Jumlah Mahasiswa</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
-
-                                            
-                                            <?php
-
-                                            $data_mhs = mysqli_query($kon,"SELECT * FROM mahasiswa ");
- 
-                                            // menghitung data barang
-                                            $jmlh_mhs = mysqli_num_rows($data_mhs);
-                                            ?>
-                                             
-                                            <p><?php echo  $jmlh_mhs;  ?></b></p>
-
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-user fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-               
-                        
-
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Jumlah Pembimbing</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
-
-
-                                            <?php
-
-                                            $data_pem = mysqli_query($kon,"SELECT * FROM pembimbing");
- 
-                                            // menghitung data barang
-                                            $jmlh_pem = mysqli_num_rows($data_pem);
-                                            ?>
-                                             
-                                            <p><?php echo $jmlh_pem; ?></b></p>
-
-
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                Jumlah Instansi</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
-
-                                            
-                                            <?php
-
-                                            $data_inst = mysqli_query($kon,"SELECT * FROM instansi ");
- 
-                                            // menghitung data barang
-                                            $jmlh_inst = mysqli_num_rows($data_inst);
-                                            ?>
-                                             
-                                            <p><?php echo  $jmlh_inst;  ?></b></p>
-
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-user fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    <!-- Content Row -->
-
-                    <div class="row">
-
-                        
+   
+     
                                 <!-- Card Body -->
                                 <div class="card-body">
                           
                             </div>
                         </div>
+                        <?php
+                           
+                           // jalankan query untuk menampilkan semua data diurutkan berdasarkan 
+                           $query = "SELECT * FROM pengumuman ORDER BY id_pengumuman ASC";
+                           $result = mysqli_query($kon, $query);
+                           //mengecek apakah ada error ketika menjalankan query
+                           if(!$result){
+                               die ("Query Error: ".mysqli_errno($kon).
+                               " - ".mysqli_error($kon));
+                           }
+
+                           //buat perulangan untuk element tabel dari data mahasiswa
+                           $no = 1; //variabel untuk membuat nomor urut
+                           // hasil query akan disimpan dalam variabel $data dalam bentuk array
+                           // kemudian dicetak dengan perulangan while
+                           while($row = mysqli_fetch_assoc($result))
+                           {
+                           ?>
 
                         <!-- Pie Chart -->
-                        <div class="col-xl-4 col-lg-5">
+                       
+                        <div class="col-md-6 col-md-6 align-items-center">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
-  
+                                <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary"><?php echo $row['judul']; ?></h6>
+                                </div>
+                                <div class="card-body">
+                                    <p><?php echo $row['isi']; ?></p>
+                                    <p class="mb-0">Tanggal :  <?php echo $row['tanggal']; ?></p>
+                                </div>
+                            </div>
                                 <!-- Card Body -->
             
                             </div>
                         </div>
                     </div>
 
-                    <!-- Content Row -->
-                    <div class="row">
-
-                  
-
-                        </div>
-                    </div>
+                    <?php
+                           };
+                    ?>
 
                 </div>
                 <!-- /.container-fluid -->

@@ -48,15 +48,22 @@ session_start();
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item s">
+            <li class="nav-item active">
                 <a class="nav-link" href="dashboard.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
+
             <li class="nav-item active">
                 <a class="nav-link" href="profile.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Profil</span></a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="nilai.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Nilai</span></a>
             </li>
 
             <!-- Divider -->
@@ -140,12 +147,7 @@ session_start();
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                    </div>
-
+     
    
      
                                 <!-- Card Body -->
@@ -154,10 +156,13 @@ session_start();
                             </div>
                         </div>
                         <?php
-                           
+                            $nim = $_SESSION['username'];
+                        
                            // jalankan query untuk menampilkan semua data diurutkan berdasarkan 
-                           $query = "SELECT * FROM pengumuman ORDER BY id_pengumuman ASC";
+                           $query = "SELECT * FROM mahasiswa WHERE nim LIKE '$nim'";
                            $result = mysqli_query($kon, $query);
+
+                           
                            //mengecek apakah ada error ketika menjalankan query
                            if(!$result){
                                die ("Query Error: ".mysqli_errno($kon).
@@ -173,17 +178,31 @@ session_start();
                            ?>
 
                         <!-- Pie Chart -->
-                       
-                        <div class="col-md-6 col-md-6 align-items-center">
+                        
+                        <div class="col">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary"><?php echo $row['judul']; ?></h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Nilai</h6>
                                 </div>
                                 <div class="card-body">
-                                    <p><?php echo $row['isi']; ?></p>
-                                    <p class="mb-0">Tanggal :  <?php echo $row['tanggal']; ?></p>
+                                    <p>Nilai Disiplin: <?php echo $row['nilai_disiplin'];?> </p>
+                                    <p class="mb-0">Nilai Tanggung jawab :  <?php echo $row['nilai_tjwb'];?></p>
+                                    <p>Nilai Inisiatif : <?php echo $row['nilai_inisiatif'];?> </p>
+                                    <p>Nilai loyalitas : <?php echo $row['nilai_loyal'];?> </p>
+                                    <p>Nilai Kemampuan Bekerja : <?php echo $row['nilai_kerja'];?> </p>
+                                    <p>Nilai kerja Sama : <?php echo $row['nilai_kerjasama'];?> </p>
+                                    <p>Nilai Pengambilan Keputusan : <?php echo $row['nilai_keputusan'];?> </p>
+                                    <p>Nilai Sikap : <?php echo $row['nilai_sikap'];?> </p>
+                                    <p>Nilai Kejujuran : <?php echo $row['nilai_jujur'];?> </p>
+                                    <p>Nilai Hasil Kerja : <?php echo $row['nilai_hasilkerja'];?> </p>
+                                    <p>Nilai Penulisan : <?php echo $row['nilai_penulisan'];?> </p>
+                                    <p>Nilai Penelitian : <?php echo $row['nilai_penelitian'];?> </p>
+
+                                    <?php
+                           }
+                                    ?>
                                 </div>
                             </div>
                                 <!-- Card Body -->
@@ -192,9 +211,6 @@ session_start();
                         </div>
                     </div>
 
-                    <?php
-                           };
-                    ?>
 
                 </div>
                 <!-- /.container-fluid -->

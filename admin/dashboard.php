@@ -353,6 +353,7 @@ session_start();
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-user fa-2x text-gray-300"></i>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -362,23 +363,54 @@ session_start();
                     <!-- Content Row -->
 
                     <div class="row">
+                         <!-- Card Body -->
+                        <div class="card-body mr-3">
+                        <?php
+                           
+                           // jalankan query untuk menampilkan semua data diurutkan berdasarkan 
+                           $query = "SELECT * FROM pengumuman ORDER BY id_pengumuman ASC";
+                           $result = mysqli_query($kon, $query);
+                           //mengecek apakah ada error ketika menjalankan query
+                           if(!$result){
+                               die ("Query Error: ".mysqli_errno($kon).
+                               " - ".mysqli_error($kon));
+                           }
 
-                        
-                                <!-- Card Body -->
-                                <div class="card-body">
-                          
-                            </div>
-                        </div>
+                           //buat perulangan untuk element tabel dari data mahasiswa
+                           $no = 1; //variabel untuk membuat nomor urut
+                           // hasil query akan disimpan dalam variabel $data dalam bentuk array
+                           // kemudian dicetak dengan perulangan while
+                           while($row = mysqli_fetch_assoc($result))
+                           {
+                           ?>
 
                         <!-- Pie Chart -->
-                        <div class="col-xl-4 col-lg-5">
+                       
+                        <div class="col-md-6 col-md-6 align-items-center">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
-  
+                                <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary"><?php echo $row['judul']; ?></h6>
+                                </div>
+                                <div class="card-body">
+                                    <p><?php echo $row['isi']; ?></p>
+                                    <p class="mb-0">Tanggal :  <?php echo $row['tanggal']; ?></p>
+                                </div>
+                            </div>
                                 <!-- Card Body -->
             
                             </div>
                         </div>
+                    </div>
+
+                    <?php
+                           };
+                    ?>
+
+                        </div>
+                        </div>
+
                     </div>
 
                     <!-- Content Row -->

@@ -251,12 +251,12 @@
             <form method="POST" action="instansi/tambah_instansi.php" enctype="multipart/form-data" >
                         <section class="base align-items-center ">
                             
-                            <div class="row mb-3">
+                            <!-- <div class="row mb-3">
                             <label for="kodeinst" class="col-sm-2 col-form-label">Kode</label>
                             <div class="col-sm-10">
                             <input type="text" class="form-control" name="kodeinst" autofocus="" required=""  />
                             </div>
-                            </div>
+                            </div> -->
 
                             <div class="row mb-3">
                             <label for="Nama" class="col-sm-2 col-form-label">Nama</label>
@@ -298,7 +298,6 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Kode Instansi</th>
                                             <th>Nama Instansi</th>
                                             <th>Nomer HP</th>
                                             <th>Alamat</th>
@@ -309,7 +308,6 @@
                                     <tfoot>
                                         <tr>
                                         <th>No</th>
-                                            <th>Kode Instansi</th>
                                             <th>Nama Instansi</th>
                                             <th>Nomer HP</th>
                                             <th>Alamat</th>
@@ -338,7 +336,7 @@
                                     <tr>
                                         <td><?php echo $no; ?></td>
                                      
-                                        <td><?php echo $row['kodeinst']; ?></td>
+                                        <!-- <td><?php echo $row['kodeinst']; ?></td> -->
                                         <td><?php echo $row['nama_inst']; ?></td>
                                         <td><?php echo $row['nohp_inst']; ?></td>
                                         <td><?php echo substr($row['alamat_inst'], 0, 20); ?>...</td>
@@ -368,12 +366,12 @@
                         <div>
                             <input type="hidden" value="<?php echo $row['id_inst']; ?>" name="id_inst" required="" />
                         </div>
-                        <div class="row mb-3">
+                        <!-- <div class="row mb-3">
                         <label for="kodeinst" class="col-sm-2 col-form-label">Kode</label>
                         <div class="col-sm-10">
                         <input type="text" class="form-control" value="<?php echo $row['kodeinst']; ?>" name="kodeinst" required="" />
                         </div>
-                        </div>
+                        </div> -->
 
 
                         <div class="row mb-3">

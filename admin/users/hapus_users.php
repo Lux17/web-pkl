@@ -1,6 +1,6 @@
 <?php
 include 'koneksi.php';
-$id = $_GET["id_pengumuman"];
+$id = $_GET["id"];
 //mengambil id yang ingin dihapus
 
     //jalankan query DELETE untuk menghapus data

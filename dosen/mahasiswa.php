@@ -219,12 +219,17 @@
                             </div>
                             <div class="row mb-3">
 
-                            <label for="JK" class="col-sm-2 col-form-label">JK</label>
-                            <div class="col-sm-10">
-                            <input type="text"  class="form-control"  name="jk_mhs" required="" />
+                            <div class="row mb-3">
+                            <label class="col-sm-2"> JK</label>
+                            <div class="input-group col-sm-10">
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="jk_mhs" >
+                                    <option value="Laki-laki">Laki-laki</option>
+                                    <option  value="Perempuan">Perempuan</option>
+                                </select>
+                                <div class="input-group-append">
                             </div>
                             </div>
-
+                            </div>
                             
                             <div class="row mb-3">
                             <label for="nohp_mhs" class="col-sm-2 col-form-label">NO HP</label>

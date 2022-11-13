@@ -375,7 +375,7 @@
             </div>
         </div>
         </div>
-                            <a href="pengumuman/hapus_Pengumuman.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a>
+                            <a href="pengumuman/hapus_Pengumuman.php?id=<?php echo $row['id_pengumuman']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a>
                         </td>
                     </tr>
                         

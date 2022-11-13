@@ -261,11 +261,20 @@
                             <input type="text" class="form-control" name="nim" />
                             </div>
                             </div>
-                            <div class="row mb-3">
 
-                            <label for="JK" class="col-sm-2 col-form-label">JK</label>
-                            <div class="col-sm-10">
-                            <input type="text"  class="form-control"  name="jk_mhs" required="" />
+                           
+
+
+                            <div class="row mb-3">
+                            <label class="col-sm-2"> JK</label>
+                            <div class="input-group col-sm-10">
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="jk_mhs" required="" >
+                                <option selected value="">Pilih</option> 
+                                <option value="Laki-laki">Laki-laki</option>
+                                <option  value="Perempuan">Perempuan</option>
+                                </select>
+                                <div class="input-group-append">
+                            </div>
                             </div>
                             </div>
 
@@ -277,10 +286,31 @@
                             </div>
                             </div>
 
+
                             <div class="row mb-3">
-                            <label for="Prodi" class="col-sm-2 col-form-label">Prodi</label>
-                            <div class="col-sm-10">
-                            <input type="text" class="form-control" name="prodi" required="" />
+                            <label class="col-sm-2"> Prodi</label>
+                            <div class="input-group col-sm-10">
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="prodi" required="" >
+                                    <option selected value="">Pilih</option>
+                                    <option value="S1 Teknik Informatika">S1 Teknik informatika</option>
+                                    <option  value="D3 Teknik Informatika">D3 Teknik informatika</option>
+                                    <option value="S1 Teknik Industri">S1 Teknik industri</option>
+                                    <option  value="D3 Teknik Industri">D3 Teknik industri</option>
+                                    <option value="S1 Ilmu Komunikasi">S1 Ilmu komunikasi</option>
+                                    <option  value="D3 Ilmu Komunikasi">D3 Ilmu komunikasi</option>
+                                    <option value="S1 Manajemen">S1 Manajemen</option>
+                                    <option  value="D3 Manajemen">D3 Manajemen</option>
+                                    <option value="S1 Ilmu Hukum">S1 Ilmu Hukum</option>
+                                    <option  value="D3 Ilmu Hukum">D3 ilmu Hukum</option>
+                                    <option value="S1 Teknik Peternakan">S1 Teknik Peternakan</option>
+                                    <option  value="D3 Teknik Peternakan">D3 Teknik Peternakan</option>
+                                    <option value="S1 Pendidikan Matematika">S1 Pendidikan Matematika</option>
+                                    <option  value="S1 Pendidikan Kimia">S1 Pendidikan Kimia</option>
+                                    <option value="S1 Kesehatan Masyarakat">S1 Kesehatan Masyarakat</option>
+                                    <option  value="S1 Farmasi">S1 Farmasi</option>
+                                </select>
+                                <div class="input-group-append">
+                            </div>
                             </div>
                             </div>
 
@@ -398,12 +428,18 @@
                         
                         
                         <div class="row mb-3">
-                            <label for="TTL" class="col-sm-2 col-form-label">JK</label>
-                            <div class="col-sm-10">
-                                <input type="text"  class="form-control"  value="<?php echo $row['jk_mhs']; ?>" name="jk_mhs" required="" />
+                            <label class="col-sm-2"> JK</label>
+                            <div class="input-group col-sm-10">
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="jk_mhs" >
+                                    <option selected ><?php echo $row['jk_mhs']; ?></option>
+                                    <option value="Laki-laki">Laki-laki</option>
+                                    <option  value="Perempuan">Perempuan</option>
+                                </select>
+                                <div class="input-group-append">
                             </div>
-                        </div>
-                        
+                            </div>
+                            </div>
+
                         <div class="row mb-3">
                         <label for="Alamat" class="col-sm-2 col-form-label">NO HP</label>
                         <div class="col-sm-10">
@@ -411,12 +447,33 @@
                         </div>
                         </div>
 
+  
                         <div class="row mb-3">
-                        <label for="Prodi" class="col-sm-2 col-form-label">Prodi</label>
-                        <div class="col-sm-10">
-                        <input type="text" class="form-control" value="<?php echo $row['prodi']; ?>" name="prodi" required="" />
-                        </div>
-                        </div>
+                            <label class="col-sm-2"> Prodi</label>
+                            <div class="input-group col-sm-10">
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="prodi" required="" >
+                                    <option selected value="<?php echo $row['prodi']; ?>"><?php echo $row['prodi']; ?></option>
+                                    <option value="S1 Teknik Informatika">S1 Teknik informatika</option>
+                                    <option  value="D3 Teknik Informatika">D3 Teknik informatika</option>
+                                    <option value="S1 Teknik Industri">S1 Teknik industri</option>
+                                    <option  value="D3 Teknik Industri">D3 Teknik industri</option>
+                                    <option value="S1 Ilmu Komunikasi">S1 Ilmu komunikasi</option>
+                                    <option  value="D3 Ilmu Komunikasi">D3 Ilmu komunikasi</option>
+                                    <option value="S1 Manajemen">S1 Manajemen</option>
+                                    <option  value="D3 Manajemen">D3 Manajemen</option>
+                                    <option value="S1 Ilmu Hukum">S1 Ilmu Hukum</option>
+                                    <option  value="D3 Ilmu Hukum">D3 ilmu Hukum</option>
+                                    <option value="S1 Teknik Peternakan">S1 Teknik Peternakan</option>
+                                    <option  value="D3 Teknik Peternakan">D3 Teknik Peternakan</option>
+                                    <option value="S1 Pendidikan Matematika">S1 Pendidikan Matematika</option>
+                                    <option  value="S1 Pendidikan Kimia">S1 Pendidikan Kimia</option>
+                                    <option value="S1 Kesehatan Masyarakat">S1 Kesehatan Masyarakat</option>
+                                    <option  value="S1 Farmasi">S1 Farmasi</option>
+                                </select>
+                                <div class="input-group-append">
+                            </div>
+                            </div>
+                            </div>
 
                         <div class="row mb-3">
                         <label for="Alamat" class="col-sm-2 col-form-label">Alamat</label>

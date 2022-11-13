@@ -261,14 +261,19 @@
                             <input type="text" class="form-control" name="nidn" />
                             </div>
                             </div>
+
                             <div class="row mb-3">
-
-                            <label for="JK" class="col-sm-2 col-form-label">JK</label>
-                            <div class="col-sm-10">
-                            <input type="text"  class="form-control"  name="jk_pem" required="" />
+                            <label class="col-sm-2"> JK</label>
+                            <div class="input-group col-sm-10">
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="jk_pem" >
+                                 
+                                    <option value="Laki-laki">Laki-laki</option>
+                                    <option  value="Perempuan">Perempuan</option>
+                                </select>
+                                <div class="input-group-append">
                             </div>
                             </div>
-
+                            </div>
                             
                             <div class="row mb-3">
                             <label for="nohp_pem" class="col-sm-2 col-form-label">NO HP</label>
@@ -388,13 +393,19 @@
                         </div>
                         </div>
                         
-                        
+
                         <div class="row mb-3">
-                            <label for="TTL" class="col-sm-2 col-form-label">JK</label>
-                            <div class="col-sm-10">
-                                <input type="text"  class="form-control"  value="<?php echo $row['jk_pem']; ?>" name="jk_pem" required="" />
+                            <label class="col-sm-2"> JK</label>
+                            <div class="input-group col-sm-10">
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="jk_pem" >
+                                    <option selected ><?php echo $row['jk_pem']; ?></option>
+                                    <option value="Laki-laki">Laki-laki</option>
+                                    <option  value="Perempuan">Perempuan</option>
+                                </select>
+                                <div class="input-group-append">
                             </div>
-                        </div>
+                            </div>
+                            </div>
                         
                         <div class="row mb-3">
                         <label for="Alamat" class="col-sm-2 col-form-label">NO HP</label>

@@ -10,7 +10,7 @@ if (isset($_POST['simpan'])) {
    
     $query = mysqli_query($kon, "SELECT nim FROM pendaftaran WHERE nim = '$nim'"); 
    
-    if($query->num_rows > 0) {
+    if($query->num_rows > 0 ) {
         echo "<script>alert('Gagal !! Data sudah Terdaftar');window.location='../form_pendaftaran.php';</script>";
     } else {
         $id_daftar = isset($_POST['id_daftar']) ? $_POST['id_daftar'] : '';

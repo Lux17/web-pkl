@@ -1,6 +1,6 @@
 <?php
 include 'koneksi.php';
-$id = $_GET['id_inst'];
+$id = $_GET['id'];
 
 //mengambil id yang ingin dihapus
 

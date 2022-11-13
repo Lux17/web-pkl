@@ -1,11 +1,11 @@
 <?php
 include 'koneksi.php';
-$id = $_GET["id_mhs"];
-var_dump($idms);
+$id = $_GET["id"];
+
 //mengambil id yang ingin dihapus
 
     //jalankan query DELETE untuk menghapus data
-    $query = "DELETE FROM mahasiswa WHERE id_mhs='$id' ";
+    $query = "DELETE FROM pendaftaran WHERE id_daftar='$id' ";
     $hasil_query = mysqli_query($kon, $query);
 
     //periksa query, apakah ada kesalahan
@@ -13,6 +13,6 @@ var_dump($idms);
       die ("Gagal menghapus data: ".mysqli_errno($kon).
        " - ".mysqli_error($kon));
     } else {
-      echo "<script>alert('Data berhasil dihapus.');window.location='../mahasiswa.php';</script>";
+      echo "<script>alert('Data berhasil dihapus.');window.location='../data_peserta.php';</script>";
     }
 ?>

@@ -1,7 +1,26 @@
 <?php
-include ('../koneksi.php');
-session_start();
-?>
+  include('../koneksi.php'); 
+  session_start();
+  
+
+  // mengecek apakah di url ada nilai GET id
+  if (isset($_GET['id_inst'])) {
+    // ambil nilai id dari url dan disimpan dalam variabel $id
+    $id_inst = ($_GET["id_inst"]);
+
+    // menampilkan data dari database yang mempunyai id=$id
+    $query = "SELECT * FROM instansi WHERE id_inst='$id_inst'";
+    $result = mysqli_query($kon, $query);
+    // jika data gagal diambil maka akan tampil error berikut
+    if(!$result){
+      die ("Query Error: ".mysqli_errno($kon).
+         " - ".mysqli_error($kon));
+    }
+    // mengambil data dari database
+    $data = mysqli_fetch_assoc($result);
+
+  }         
+  ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +33,7 @@ session_start();
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Computer Education- Dashboard</title>
+    <title>Registrasi PKL- Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -27,6 +46,7 @@ session_start();
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
+
 
 <body id="page-top">
 
@@ -41,38 +61,48 @@ session_start();
                 <div class="sidebar-brand-icon">
                     <img src="../assets/img/favicon1.png" alt="" width="43" height="45" class="d-inline-block align-text-top">
                 </div>
-                <div class="sidebar-brand-text mx-3">Registrasi PKL </div>
+                <div class="sidebar-brand-text mx-3">Registrasi PKL</div>
             </a>
-
+            
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
+            
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item s">
+            <li class="nav-item active">
                 <a class="nav-link" href="dashboard.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
+
             <li class="nav-item active">
                 <a class="nav-link" href="profile.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Profil</span></a>
             </li>
+
             <li class="nav-item active">
                 <a class="nav-link" href="nilai.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Nilai</span></a>
             </li>
+
             <li class="nav-item active">
-                <a class="nav-link" href="bimbingan.php">
+                <a class="nav-link" href="instansi.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Instansi</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="Bimbingan.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Bimbingan</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="mahasiswa.php">
+                <a class="nav-link" href="daftar.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Mahasiswa</span></a>
+                    <span>Registrasi</span></a>
             </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider">
             
@@ -80,10 +110,8 @@ session_start();
             <div class="sidebar-heading">
                 Interface
             </div>
-            
+
             <!-- Nav Item - Charts -->
-   
-            
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -112,11 +140,18 @@ session_start();
                         <i class="fa fa-bars"></i>
                     </button>
 
+      
+
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
+                       
 
-                    
+                        
+                       
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
@@ -136,7 +171,6 @@ session_start();
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
-            
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -154,61 +188,91 @@ session_start();
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                    </div>
+                    <h1 class="h3 mb-2 text-gray-800">Instansi</h1>
+                    <p class="mb-4">Daftar List Instansi .</p>
 
-   
-     
-                                <!-- Card Body -->
-                                <div class="card-body">
-                          
-                            </div>
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-success">Data Tabel Instansi</h6>
                         </div>
-                        <?php
+
+                
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                         <!-- Button trigger modal -->
+
+
+
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            
+                                            <th>Nama Instansi</th>
+                                            <th>Nomer HP</th>
+                                            <th>Alamat</th>
+                                        
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                        <th>No</th>
+                                           
+                                            <th>Nama Instansi</th>
+                                            <th>Nomer HP</th>
+                                            <th>Alamat</th>
+                                            <th></th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                    <?php
                            
-                           // jalankan query untuk menampilkan semua data diurutkan berdasarkan 
-                           $query = "SELECT * FROM pengumuman ORDER BY id_pengumuman ASC";
-                           $result = mysqli_query($kon, $query);
-                           //mengecek apakah ada error ketika menjalankan query
-                           if(!$result){
-                               die ("Query Error: ".mysqli_errno($kon).
-                               " - ".mysqli_error($kon));
-                           }
+                                    // jalankan query untuk menampilkan semua data diurutkan berdasarkan 
+                                    $query = "SELECT * FROM instansi ORDER BY id_inst ASC";
+                                    $result = mysqli_query($kon, $query);
+                                    //mengecek apakah ada error ketika menjalankan query
+                                    if(!$result){
+                                        die ("Query Error: ".mysqli_errno($kon).
+                                        " - ".mysqli_error($kon));
+                                    }
 
-                           //buat perulangan untuk element tabel dari data mahasiswa
-                           $no = 1; //variabel untuk membuat nomor urut
-                           // hasil query akan disimpan dalam variabel $data dalam bentuk array
-                           // kemudian dicetak dengan perulangan while
-                           while($row = mysqli_fetch_assoc($result))
-                           {
-                           ?>
+                                    //buat perulangan untuk element tabel dari data instansi
+                                    $no = 1; //variabel untuk membuat nomor urut
+                                    // hasil query akan disimpan dalam variabel $data dalam bentuk array
+                                    // kemudian dicetak dengan perulangan while
+                                    while($row = mysqli_fetch_assoc($result))
+                                    {
+                                    ?>
+                                    <tr>
+                                        <td><?php echo $no; ?></td>
+                                     
+                                        
+                                        <td><?php echo $row['nama_inst']; ?></td>
+                                        <td><?php echo $row['nohp_inst']; ?></td>
+                                        <td><?php echo  $row['alamat_inst'] ?></td>
+                                        
+                                       
+                                
+                                        
 
-                        <!-- Pie Chart -->
-                       
-                        <div class="col-md-6 col-md-6 align-items-center">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary"><?php echo $row['judul']; ?></h6>
-                                </div>
-                                <div class="card-body">
-                                    <p><?php echo $row['isi']; ?></p>
-                                    <p class="mb-0">Tanggal :  <?php echo $row['tanggal']; ?></p>
-                                </div>
-                            </div>
-                                <!-- Card Body -->
-            
+                                        </td>
+                                        
+                                        
+                            
+    
+                                    </tr>
+                                        
+                                    <?php
+                                        $no++; //untuk nomor urut terus bertambah 1
+                                    }
+                                    ?>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
-
-                    <?php
-                           };
-                    ?>
 
                 </div>
                 <!-- /.container-fluid -->
@@ -237,7 +301,6 @@ session_start();
         <i class="fas fa-angle-up"></i>
     </a>
 
-
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -258,7 +321,6 @@ session_start();
         </div>
     </div>
 
-
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -270,11 +332,11 @@ session_start();
     <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/demo/datatables-demo.js"></script>
 
 </body>
 

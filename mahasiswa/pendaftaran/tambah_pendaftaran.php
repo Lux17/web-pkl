@@ -8,13 +8,12 @@ session_start();
 if (isset($_POST['simpan'])) {
     $nim = $_POST['nim'];
    
-    $query = mysqli_query($kon, "SELECT nim FROM pendaftaran WHERE nim = '$nim'"); 
+    $query = mysqli_query($kon, "SELECT nim FROM pengajuan WHERE nim = '$nim'"); 
    
     if($query->num_rows > 0) {
-        echo "<script>alert('Gagal !! Data sudah Terdaftar');window.location='../form_pendaftaran.php';</script>";
+        echo "<script>alert('Gagal !! Anda sudah Terdaftar');window.location='../daftar.php';</script>";
     } else {
         $id_daftar = isset($_POST['id_daftar']) ? $_POST['id_daftar'] : '';
-        $kode_daftar = isset($_POST['kode_daftar']) ? $_POST['kode_daftar'] : '';
         $nama_mhs = isset($_POST['nama_mhs']) ? $_POST['nama_mhs'] : '';
         $nim = isset($_POST['nim']) ? $_POST['nim'] : '';
         $prodi= isset($_POST['prodi']) ? $_POST['prodi'] : '';
@@ -25,7 +24,7 @@ if (isset($_POST['simpan'])) {
         $alamat_inst = isset($_POST['alamat_inst']) ? $_POST['alamat_inst'] : '';
         $nohp_inst = isset($_POST['nohp_inst']) ? $_POST['nohp_inst'] : '';
         
-        $query = "INSERT INTO pendaftaran(kode_daftar, nama_mhs, nim, nohp_mhs,prodi,nama_pem, nohp_pem, nama_inst, alamat_inst,nohp_inst ) VALUES ('$kode_daftar','$nama_mhs', '$nim','$nohp_mhs', '$prodi','$nama_pem',  '$nohp_pem', '$nama_inst','$alamat_inst','$nohp_inst')";
+        $query = "INSERT INTO pengajuan(nama_mhs, nim, nohp_mhs,prodi,nama_pem, nohp_pem, nama_inst, alamat_inst,nohp_inst ) VALUES ('$nama_mhs', '$nim','$nohp_mhs', '$prodi','$nama_pem',  '$nohp_pem', '$nama_inst','$alamat_inst','$nohp_inst')";
         $result = mysqli_query($kon, $query);
                           // periska query apakah ada error
         // $jumlah = mysqli_num_rows($result);
@@ -34,7 +33,7 @@ if (isset($_POST['simpan'])) {
             die ("Query gagal dijalankan: ".mysqli_errno($kon).
                                                " - ".mysqli_error($kon));
         } else {                      
-        echo "<script>alert('Data berhasil ditambah.');window.location='../form_pendaftaran.php';</script>";
+        echo "<script>alert('Data berhasil ditambah.');window.location='../daftar.php';</script>";
         }
                     
         

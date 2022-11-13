@@ -65,6 +65,21 @@ session_start();
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Nilai</span></a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="instansi.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Instansi</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="Bimbingan.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Bimbingan</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="daftar.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Registrasi</span></a>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -186,14 +201,14 @@ session_start();
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Profil</h6>
                                 </div>
-                                <div class="card-body">
-                                    <p>Nama : <?php echo $row['nama_mhs'];?> </p>
-                                    <p class="mb-0">Tanggal :  <?php echo $row['nim'];?></p>
-                                    <p>Jenis kelamin : <?php echo $row['jk_mhs'];?> </p>
-                                    <p>Nomer HP  : <?php echo $row['nohp_mhs'];?> </p>
-                                    <p>Alamat : <?php echo $row['alamat_mhs'];?> </p>
-                                    <p>Prodi : <?php echo $row['prodi'];?> </p>
-                                    <p>Jumlah Bimbingan : <?php echo $row['jmlh_bimbingan'];?> </p>
+                                <div class="card-body ">
+                                    <p>Nama&emsp;&emsp; &emsp; &emsp;&ensp; : <?php echo $row['nama_mhs'];?> </p>
+                                    <p>Tanggal&ensp;&emsp;&emsp;&emsp;&ensp; :  <?php echo $row['nim'];?></p>
+                                    <p>Jenis kelamin&emsp;&emsp;: <?php echo $row['jk_mhs'];?> </p>
+                                    <p>Nomer HP &emsp;&emsp;&emsp;: <?php echo $row['nohp_mhs'];?> </p>
+                                    <p>Alamat &emsp;&emsp;&emsp;&emsp;&ensp;: <?php echo $row['alamat_mhs'];?> </p>
+                                    <p>Prodi &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;: <?php echo $row['prodi'];?> </p>
+                                    
 
                                     <?php
                                         };
@@ -220,7 +235,8 @@ session_start();
                                         while($row = mysqli_fetch_assoc($result))
                                         {
                                         ?>
-                                    <p>Pembimbing : <?php echo $row['nama_pem'];?> -</p>
+                                    <!-- <p>Jumlah Bimbingan : <?php echo $row['jmlh_bimbingan'];?> / 8</p>
+                                    <p>Pembimbing : <?php echo $row['nama_pem'];?> -</p> -->
                                     <?php
                                         };
                                     ?>

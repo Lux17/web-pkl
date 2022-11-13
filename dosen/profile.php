@@ -48,18 +48,31 @@ session_start();
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item s">
                 <a class="nav-link" href="dashboard.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
-
             <li class="nav-item active">
                 <a class="nav-link" href="profile.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Profil</span></a>
             </li>
-
+            <li class="nav-item active">
+                <a class="nav-link" href="nilai.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Nilai</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="bimbingan.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Bimbingan</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="mahasiswa.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Mahasiswa</span></a>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
             

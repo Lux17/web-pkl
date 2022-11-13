@@ -48,31 +48,37 @@ session_start();
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item s">
+            <li class="nav-item ">
                 <a class="nav-link" href="dashboard.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="profile.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Profil</span></a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item ">
                 <a class="nav-link" href="nilai.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Nilai</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="bimbingan.php">
+                <a class="nav-link" href="instansi.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Instansi</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="Bimbingan.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Bimbingan</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="mahasiswa.php">
+                <a class="nav-link" href="daftar.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Mahasiswa</span></a>
+                    <span>Registrasi</span></a>
             </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider">
             
@@ -156,8 +162,7 @@ session_start();
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                    
                     </div>
 
    
@@ -167,48 +172,91 @@ session_start();
                           
                             </div>
                         </div>
-                        <?php
-                           
-                           // jalankan query untuk menampilkan semua data diurutkan berdasarkan 
-                           $query = "SELECT * FROM pengumuman ORDER BY id_pengumuman ASC";
-                           $result = mysqli_query($kon, $query);
-                           //mengecek apakah ada error ketika menjalankan query
-                           if(!$result){
-                               die ("Query Error: ".mysqli_errno($kon).
-                               " - ".mysqli_error($kon));
-                           }
-
-                           //buat perulangan untuk element tabel dari data mahasiswa
-                           $no = 1; //variabel untuk membuat nomor urut
-                           // hasil query akan disimpan dalam variabel $data dalam bentuk array
-                           // kemudian dicetak dengan perulangan while
-                           while($row = mysqli_fetch_assoc($result))
-                           {
-                           ?>
-
-                        <!-- Pie Chart -->
-                       
-                        <div class="col-md-6 col-md-6 align-items-center">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary"><?php echo $row['judul']; ?></h6>
-                                </div>
-                                <div class="card-body">
-                                    <p><?php echo $row['isi']; ?></p>
-                                    <p class="mb-0">Tanggal :  <?php echo $row['tanggal']; ?></p>
-                                </div>
-                            </div>
-                                <!-- Card Body -->
-            
-                            </div>
-                        </div>
-                    </div>
-
+                       <!-- Content Row -->
+                    <div class="row">
                     <?php
-                           };
-                    ?>
+                                                 
+                                                   
+                                                 $nim = $_SESSION['username'];
+                                                 $query = "SELECT * FROM pendaftaran WHERE nim LIKE '$nim'";
+                                                 $result = mysqli_query($kon, $query);
+                                              
+                                                 if(!$result){
+                                                  die ("Query Error: ".mysqli_errno($kon).
+                                                  " - ".mysqli_error($kon));
+                                              }
+                   
+                                              //buat perulangan untuk element tabel dari data nilai
+                                              $no = 1; //variabel untuk membuat nomor urut
+                                              // hasil query akan disimpan dalam variabel $data dalam bentuk array
+                                              // kemudian dicetak dengan perulangan while
+                                              while($row = mysqli_fetch_assoc($result))
+                                              {
+                         
+                        ?>
+<!-- Content Column -->
+<div class="col-lg-6 mb-4">
+
+    <!-- Project Card Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Pemberitahuan</h6>
+        </div>
+        <div class="card-body">
+        <p > Silahkan Menghubungi Dosen pembimbing terkait Jadwal Bimbingan Mahasiswa, Sebagai Syarat Sidang Mahasiswa Harus melakukan 8X bimbingan.</p>
+            <div class="card-body">
+
+        </div>
+        </div>
+    </div>
+
+    <!-- Color System -->
+    <div class="row">
+        
+    </div>
+
+</div>
+
+                        
+<div class="col-lg-6 mb-4">
+
+    <!-- Illustrations -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary"></h6>
+        </div>
+        <div class="card-body">
+            <div class="text-center">
+            </div>
+            <p > Instansi&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;: <?php echo $row['nama_inst']; ?></p>
+            <p >Nama Pembimbing &emsp;&emsp;&emsp;: <?php echo $row['nama_pem']; ?> </p>
+            <p >No Pembimbing &emsp;&emsp;&emsp;&emsp;&ensp;: <?php echo $row['nohp_pem']; ?> </p>
+    
+        </div>
+    </div>
+
+    <!-- Approach -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Bimbingan</h6>
+        </div>
+        <div class="card-body">
+            <p>Jadwal Bimbingan &emsp;&emsp;: <?php echo $row['jdwl_bimbing']; ?></p>
+            <p class="mb-0">Jumlah Bimbingan &emsp;&emsp;: <?php echo $row['jmlh_bimbingan']; ?>/ 8</p>
+        </div>
+    </div>
+<?php
+                                              };
+
+?>
+</div>
+</div>
+
+</div>
+<!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
 
                 </div>
                 <!-- /.container-fluid -->

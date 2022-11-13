@@ -66,6 +66,23 @@ session_start();
                     <span>Nilai</span></a>
             </li>
 
+            <li class="nav-item active">
+                <a class="nav-link" href="instansi.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Instansi</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="Bimbingan.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Bimbingan</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="daftar.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Registrasi</span></a>
+            </li>
+
+
             <!-- Divider -->
             <hr class="sidebar-divider">
             
@@ -159,7 +176,7 @@ session_start();
                             $nim = $_SESSION['username'];
                         
                            // jalankan query untuk menampilkan semua data diurutkan berdasarkan 
-                           $query = "SELECT * FROM mahasiswa WHERE nim LIKE '$nim'";
+                           $query = "SELECT * FROM pendaftaran WHERE nim LIKE '$nim'";
                            $result = mysqli_query($kon, $query);
 
                            
@@ -187,18 +204,18 @@ session_start();
                                     <h6 class="m-0 font-weight-bold text-primary">Nilai</h6>
                                 </div>
                                 <div class="card-body">
-                                    <p>Nilai Disiplin: <?php echo $row['nilai_disiplin'];?> </p>
-                                    <p class="mb-0">Nilai Tanggung jawab :  <?php echo $row['nilai_tjwb'];?></p>
-                                    <p>Nilai Inisiatif : <?php echo $row['nilai_inisiatif'];?> </p>
-                                    <p>Nilai loyalitas : <?php echo $row['nilai_loyal'];?> </p>
-                                    <p>Nilai Kemampuan Bekerja : <?php echo $row['nilai_kerja'];?> </p>
-                                    <p>Nilai kerja Sama : <?php echo $row['nilai_kerjasama'];?> </p>
-                                    <p>Nilai Pengambilan Keputusan : <?php echo $row['nilai_keputusan'];?> </p>
-                                    <p>Nilai Sikap : <?php echo $row['nilai_sikap'];?> </p>
-                                    <p>Nilai Kejujuran : <?php echo $row['nilai_jujur'];?> </p>
-                                    <p>Nilai Hasil Kerja : <?php echo $row['nilai_hasilkerja'];?> </p>
-                                    <p>Nilai Penulisan : <?php echo $row['nilai_penulisan'];?> </p>
-                                    <p>Nilai Penelitian : <?php echo $row['nilai_penelitian'];?> </p>
+                                    <p>Nilai Disiplin&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;: <?php echo $row['nilai_disiplin'];?> </p>
+                                    <p>Nilai Tanggung jawab&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;:  <?php echo $row['nilai_tjwb'];?></p>
+                                    <p>Nilai Inisiatif&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; : <?php echo $row['nilai_inisiatif'];?> </p>
+                                    <p>Nilai loyalitas&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp; : <?php echo $row['nilai_loyal'];?> </p>
+                                    <p>Nilai Kemampuan Bekerja&emsp;&emsp;&emsp;&emsp;  : <?php echo $row['nilai_kerja'];?> </p>
+                                    <p>Nilai kerja Sama&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;: <?php echo $row['nilai_kerjasama'];?> </p>
+                                    <p>Nilai Pengambilan Keputusan&emsp;&emsp;&ensp;: <?php echo $row['nilai_keputusan'];?> </p>
+                                    <p>Nilai Sikap&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;: <?php echo $row['nilai_sikap'];?> </p>
+                                    <p>Nilai Kejujuran&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp; : <?php echo $row['nilai_jujur'];?> </p>
+                                    <p>Nilai Hasil Kerja&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;     : <?php echo $row['nilai_hasilkerja'];?> </p>
+                                    <p>Nilai Penulisan&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; : <?php echo $row['nilai_penulisan'];?> </p>
+                                    <p>Nilai Penelitian&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; : <?php echo $row['nilai_penelitian'];?> </p>
 
                                     <?php
                            }

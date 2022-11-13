@@ -63,6 +63,22 @@ session_start();
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Nilai</span></a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="instansi.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Instansi</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="Bimbingan.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Bimbingan</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="daftar.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Registrasi</span></a>
+            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider">
             

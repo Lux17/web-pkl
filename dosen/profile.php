@@ -194,11 +194,11 @@ session_start();
                                     <h6 class="m-0 font-weight-bold text-primary">Profil</h6>
                                 </div>
                                 <div class="card-body">
-                                    <p>Nama : <?php echo $row['nama_pem'];?> </p>
-                                    <p >Tanggal :  <?php echo $row['nidn'];?></p>
-                                    <p>Jenis kelamin : <?php echo $row['jk_pem'];?> </p>
-                                    <p>Nomer HP  : <?php echo $row['nohp_pem'];?> </p>
-                                    <p>Alamat : <?php echo $row['alamat_pem'];?> </p>
+                                    <p>Nama &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;: <?php echo $row['nama_pem'];?> </p>
+                                    <p >NIDN &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; :  <?php echo $row['nidn'];?></p>
+                                    <p>Jenis kelamin &emsp;&emsp;&emsp;&emsp;&emsp;: <?php echo $row['jk_pem'];?> </p>
+                                    <p>Nomer HP  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; : <?php echo $row['nohp_pem'];?> </p>
+                                    <p>Alamat &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp; : <?php echo $row['alamat_pem'];?> </p>
                                   
 
                                     <?php
@@ -226,7 +226,7 @@ session_start();
                                         while($row = mysqli_fetch_assoc($result))
                                         {
                                         ?>
-                                    <p>Mahasiswa : - <?php echo $row['nama_mhs'];?> </p>
+                                    <p>Mahasiswa &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;: - <?php echo $row['nama_mhs'];?> </p>
                                     <?php
                                         };
                                     ?>

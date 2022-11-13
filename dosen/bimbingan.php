@@ -4,12 +4,12 @@
   
 
   // mengecek apakah di url ada nilai GET id
-  if (isset($_GET['id_mhs'])) {
+  if (isset($_GET['id_daftar'])) {
     // ambil nilai id dari url dan disimpan dalam variabel $id
-    $id_mhs = ($_GET["id_mhs"]);
+    $id_daftar = ($_GET["id_daftar"]);
 
     // menampilkan data dari database yang mempunyai id=$id
-    $query = "SELECT * FROM nilai WHERE id_mhs='$id_mhs'";
+    $query = "SELECT * FROM nilai WHERE id_daftar='$id_daftar'";
     $result = mysqli_query($kon, $query);
     // jika data gagal diambil maka akan tampil error berikut
     if(!$result){
@@ -318,11 +318,11 @@
                                         
 
                                         <td>
-                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id_mhs'];?>">
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id_daftar'];?>">
                             Ubah
                             </button>
    
-        <div class="modal fade" id="exampleModal<?php echo $row['id_mhs'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal<?php echo $row['id_daftar'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
@@ -332,56 +332,59 @@
                 </button>
             </div>
             <div class="modal-body">
-            <form method="POST" action="nilai/edit_nilai.php" enctype="multipart/form-data" >
+            <form method="POST" action="bimbingan/edit_bimbing.php" enctype="multipart/form-data" >
             
                         <section class="base align-items-center ">
                         <div>
-                            <input type="hidden" value="<?php echo $row['id_mhs']; ?>" name="id_mhs" required="" />
+                            <input type="hidden" value="<?php echo $row['id_daftar']; ?>" name="id_daftar" required="" />
                         </div>
                         <div class="row mb-3">
                         <label for="Nama" class="col-sm-2 col-form-label">Nama</label>
-                        <div class="col-sm-10">
-                        <input type="text" class="form-control" value="<?php echo $row['nama_mhs']; ?>" name="nama_mhs" autofocus="" required="" />
+                        <div class="col-sm-10"> 
+                        <input type="text" class="form-control" readonly value="<?php echo $row['nama_mhs']; ?>" name="nama_mhs" autofocus="" required="" />
                         </div>
                         </div>
 
                         <div class="row mb-3">
                         <label for="No CE" class="col-sm-2 col-form-label">NIM</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" value="<?php echo $row['nim']; ?>"  name="nim" required="" />
+                        <input type="text" class="form-control" readonly value="<?php echo $row['nim']; ?>"  name="nim" required="" />
                         </div>
                         </div>
-                        
-                        
+    
                         <div class="row mb-3">
-                            <label for="TTL" class="col-sm-2 col-form-label">JK</label>
-                            <div class="col-sm-10">
-                                <input type="text"  class="form-control"  value="<?php echo $row['jk_mhs']; ?>" name="jk_mhs" required="" />
+                        <label for="Nama" class="col-sm-2 col-form-label">Jadwal Bimbingan</label>
+                        <div class="col-sm-10">
+                        <input type="date" class="form-control" value="<?php echo $row['jdwl_bimbing']; ?>" name="jdwl_bimbing" autofocus="" required="" />
+                        </div>
+                        </div>
+<!-- 
+                        <div class="row mb-3">
+                        <label for="No CE" class="col-sm-2 col-form-label">Jumlah Bimbingan</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" value="<?php echo $row['jmlh_bimbingan']; ?>"  name="jmlh_bimbingan" required="" />
+                        </div>
+                        </div> -->
+    
+                        <div>
+                            <label> Jumlah Bimbingan</label>
+                            <div class="input-group">
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="jmlh_bimbingan" >
+                                    <option selected ><?php echo $row['jmlh_bimbingan']; ?></option>
+                                    <option value="1">1</option>
+                                    <option  value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option  value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option  value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option  value="8">8</option>
+                                    
+
+                                </select>
+                                <div class="input-group-append">
                             </div>
-                        </div>
-                        
-                        <div class="row mb-3">
-                        <label for="Alamat" class="col-sm-2 col-form-label">NO HP</label>
-                        <div class="col-sm-10">
-                        <input type="text" class="form-control" value="<?php echo $row['nohp_mhs']; ?>" name="nohp_mhs" required="" />
-                        </div>
-                        </div>
-
-                        <div class="row mb-3">
-                        <label for="Prodi" class="col-sm-2 col-form-label">Prodi</label>
-                        <div class="col-sm-10">
-                        <input type="text" class="form-control" value="<?php echo $row['prodi']; ?>" name="prodi" required="" />
-                        </div>
-                        </div>
-
-                        <div class="row mb-3">
-                        <label for="Alamat" class="col-sm-2 col-form-label">Alamat</label>
-                        <div class="col-sm-10">
-                        <input type="text" class="form-control" value="<?php echo $row['alamat_mhs']; ?>" name="alamat_mhs" required="" />
-                        </div>
-                        </div>
-
-
+           
            
 
                         </section>

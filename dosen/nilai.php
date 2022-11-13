@@ -170,12 +170,12 @@
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Nilai</h1>
-                    <p class="mb-4">Daftar List Mahasiswa .</p>
+                    <p class="mb-4">Daftar List Nilai Mahasiswa .</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-success">Data Tabel nilai</h6>
+                            <h6 class="m-0 font-weight-bold text-success">Data Tabel Nilai</h6>
                         </div>
 
                 
@@ -183,91 +183,26 @@
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                          <!-- Button trigger modal -->
-
-
-
-
-   
-
-
-<!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Tambah nilai</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-            <form method="POST" action="nilai/tambah_nilai.php" enctype="multipart/form-data" >
-                        <section class="base align-items-center ">
-                            <div class="row mb-3">
-                            <label for="Nama" class="col-sm-2 col-form-label">Nama</label>
-                            <div class="col-sm-10">
-                            <input type="text" class="form-control" name="nama_mhs" autofocus="" required=""  />
-                            </div>
-                            </div>
-
-                            <div class="row mb-3">
-                            <label for="NIM" class="col-sm-2 col-form-label">NIM</label>
-                            <div class="col-sm-10">
-                            <input type="text" class="form-control" name="nim" />
-                            </div>
-                            </div>
-                            <div class="row mb-3">
-
-                            <label for="JK" class="col-sm-2 col-form-label">JK</label>
-                            <div class="col-sm-10">
-                            <input type="text"  class="form-control"  name="jk_mhs" required="" />
-                            </div>
-                            </div>
-
-                            
-                            <div class="row mb-3">
-                            <label for="nohp_mhs" class="col-sm-2 col-form-label">NO HP</label>
-                            <div class="col-sm-10">
-                            <input type="text" class="form-control" name="nohp_mhs" required="" />
-                            </div>
-                            </div>
-
-                            <div class="row mb-3">
-                            <label for="Prodi" class="col-sm-2 col-form-label">Prodi</label>
-                            <div class="col-sm-10">
-                            <input type="text" class="form-control" name="prodi" required="" />
-                            </div>
-                            </div>
-
-                            <div class="row mb-3">
-                            <label for="Alamat" class="col-sm-2 col-form-label">Alamat</label>
-                            <div class="col-sm-10">
-                            <input type="text" class="form-control" name="alamat_mhs" required="" />
-                            </div>
-                            </div>
-
-      
-                            
-                        </section>
-                        
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                <button type="submit" name="simpan" class="btn btn-primary">Simpan</button>
-            </div>
-            </form>
-            </div>
-        </div>
-        </div>
+                        </div>
+                        </div>
                                     <thead>
                                         <tr>
                                             <th>No</th>
                                             <th>Nama</th>
                                             <th>NIM</th>
-                                            <th>Jenis kelamin</th>
-                                            <th>Nomer HP</th>
-                                            <th>Prodi</th>
-                                            <th>Alamat</th>
+                                            <th>Disiplin</th>
+                                            <th>Tangggung jawab</th>
+                                            <th>Inisiatif</th>
+                                            <th>Loyalitas</th>
+                                            <th>Kemampuan Bekerja</th>
+                                            <th>Kerja Sama</th>
+                                            <th>Pengambilan Keputusan</th>
+                                            <th>Sikap</th>
+                                            <th>Kejujuran</th>
+                                            <th>Hasil Kerja</th>
+                                            <th>Penulisan</th>
+                                            <th>Penelitian</th>
+
                                         
                                             <th></th>
                                         </tr>
@@ -277,11 +212,19 @@
                                         <th>No</th>
                                             <th>Nama</th>
                                             <th>NIM</th>
-                                            <th>Jenis kelamin</th>
-                                            <th>Nomer HP</th>
-                                            <th>Prodi</th>
-                                            <th>Alamat</th>
-                                            <th></th>
+                                            <th>Disiplin</th>
+                                            <th>Tangggung jawab</th>
+                                            <th>Inisiatif</th>
+                                            <th>Loyalitas</th>
+                                            <th>Kemampuan Bekerja</th>
+                                            <th>Kerja Sama</th>
+                                            <th>Pengambilan Keputusan</th>
+                                            <th>Sikap</th>
+                                            <th>Kejujuran</th>
+                                            <th>Hasil Kerja</th>
+                                            <th>Penulisan</th>
+                                            <th>Penelitian</th>
+
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -317,17 +260,23 @@
                                         <td><?php echo $row['nilai_loyal']; ?></td>
                                         <td><?php echo $row['nilai_kerja']; ?></td>
                                         <td><?php echo $row['nilai_kerjasama'] ?></td>
+                                        <td><?php echo $row['nilai_keputusan']; ?></td>
+                                        <td><?php echo $row['nilai_sikap'] ?></td>
+                                        <td><?php echo $row['nilai_jujur']; ?></td>
+                                        <td><?php echo $row['nilai_hasilkerja'] ?></td>
+                                        <td><?php echo $row['nilai_penulisan']; ?></td>
+                                        <td><?php echo $row['nilai_penelitian'] ?></td>
                                         
                    
                                         
 
                                         <td>
-                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id_mhs'];?>">
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id_daftar'];?>">
                             Ubah
                             </button>
    
-        <div class="modal fade" id="exampleModal<?php echo $row['id_mhs'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal fade" id="exampleModal<?php echo $row['id_daftar'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">  
             <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Edit nilai</h5>
@@ -340,52 +289,96 @@
             
                         <section class="base align-items-center ">
                         <div>
-                            <input type="hidden" value="<?php echo $row['id_mhs']; ?>" name="id_mhs" required="" />
+                            <input type="hidden" value="<?php echo $row['id_daftar']; ?>" name="id_daftar" required="" />
                         </div>
                         <div class="row mb-3">
                         <label for="Nama" class="col-sm-2 col-form-label">Nama</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" value="<?php echo $row['nama_mhs']; ?>" name="nama_mhs" autofocus="" required="" />
+                        <input type="text" class="form-control" readonly value="<?php echo $row['nama_mhs']; ?>" name="nama_mhs" autofocus="" required="" />
                         </div>
                         </div>
 
                         <div class="row mb-3">
                         <label for="No CE" class="col-sm-2 col-form-label">NIM</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" value="<?php echo $row['nim']; ?>"  name="nim" required="" />
+                        <input type="text" class="form-control" readonly value="<?php echo $row['nim']; ?>"  name="nim" required="" />
                         </div>
                         </div>
                         
                         
                         <div class="row mb-3">
-                            <label for="TTL" class="col-sm-2 col-form-label">JK</label>
+                            <label for="nilai_disiplin" class="col-sm-2 col-form-label">Disiplin</label>
                             <div class="col-sm-10">
-                                <input type="text"  class="form-control"  value="<?php echo $row['jk_mhs']; ?>" name="jk_mhs" required="" />
+                                <input type="text"  class="form-control"  value="<?php echo $row['nilai_disiplin']; ?>" name="nilai_disiplin" required="" />
                             </div>
                         </div>
                         
                         <div class="row mb-3">
-                        <label for="Alamat" class="col-sm-2 col-form-label">NO HP</label>
-                        <div class="col-sm-10">
-                        <input type="text" class="form-control" value="<?php echo $row['nohp_mhs']; ?>" name="nohp_mhs" required="" />
+                            <label for="nilai_tjwb" class="col-sm-2 col-form-label">Tangggung jawab</label>
+                            <div class="col-sm-10">
+                                <input type="text"  class="form-control"  value="<?php echo $row['nilai_tjwb']; ?>" name="nilai_tjwb" required="" />
+                            </div>
                         </div>
-                        </div>
-
                         <div class="row mb-3">
-                        <label for="Prodi" class="col-sm-2 col-form-label">Prodi</label>
-                        <div class="col-sm-10">
-                        <input type="text" class="form-control" value="<?php echo $row['prodi']; ?>" name="prodi" required="" />
+                            <label for="nilai_inisiatif" class="col-sm-2 col-form-label">inisiatif</label>
+                            <div class="col-sm-10">
+                                <input type="text"  class="form-control"  value="<?php echo $row['nilai_inisiatif']; ?>" name="nilai_inisiatif" required="" />
+                            </div>
                         </div>
-                        </div>
-
                         <div class="row mb-3">
-                        <label for="Alamat" class="col-sm-2 col-form-label">Alamat</label>
-                        <div class="col-sm-10">
-                        <input type="text" class="form-control" value="<?php echo $row['alamat_mhs']; ?>" name="alamat_mhs" required="" />
+                            <label for="nilai_loyal" class="col-sm-2 col-form-label">loyaliyas</label>
+                            <div class="col-sm-10">
+                                <input type="text"  class="form-control"  value="<?php echo $row['nilai_loyal']; ?>" name="nilai_loyal" required="" />
+                            </div>
                         </div>
+                        <div class="row mb-3">
+                            <label for="nilai_kerja" class="col-sm-2 col-form-label">Kemampuan Bekerja</label>
+                            <div class="col-sm-10">
+                                <input type="text"  class="form-control"  value="<?php echo $row['nilai_kerja']; ?>" name="nilai_kerja" required="" />
+                            </div>
                         </div>
-
-
+                        <div class="row mb-3">
+                            <label for="nilai_kerjasama" class="col-sm-2 col-form-label">Kerja Sama</label>
+                            <div class="col-sm-10">
+                                <input type="text"  class="form-control"  value="<?php echo $row['nilai_kerjasama']; ?>" name="nilai_kerjasama" required="" />
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="nilai_keputusan" class="col-sm-2 col-form-label">Keputusan</label>
+                            <div class="col-sm-10">
+                                <input type="text"  class="form-control"  value="<?php echo $row['nilai_keputusan']; ?>" name="nilai_keputusan" required="" />
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="nilai_sikap" class="col-sm-2 col-form-label">Sikap</label>
+                            <div class="col-sm-10">
+                                <input type="text"  class="form-control"  value="<?php echo $row['nilai_sikap']; ?>" name="nilai_sikap" required="" />
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="nilai_jujur" class="col-sm-2 col-form-label">Jujur</label>
+                            <div class="col-sm-10">
+                                <input type="text"  class="form-control"  value="<?php echo $row['nilai_jujur']; ?>" name="nilai_jujur" required="" />
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="nilai_hasilkerja" class="col-sm-2 col-form-label">Hasil Kerja</label>
+                            <div class="col-sm-10">
+                                <input type="text"  class="form-control"  value="<?php echo $row['nilai_hasilkerja']; ?>" name="nilai_hasilkerja" required="" />
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="nilai_penulisan" class="col-sm-2 col-form-label">Penulisan</label>
+                            <div class="col-sm-10">
+                                <input type="text"  class="form-control"  value="<?php echo $row['nilai_penulisan']; ?>" name="nilai_penulisan" />
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="nilai_penelitian" class="col-sm-2 col-form-label">Penelitian</label>
+                            <div class="col-sm-10">
+                                <input type="text"  class="form-control"  value="<?php echo $row['nilai_penelitian']; ?>" name="nilai_penelitian" />
+                            </div>
+                        </div>
            
 
                         </section>

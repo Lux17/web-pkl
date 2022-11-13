@@ -170,13 +170,13 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Mahasiswa</h1>
-                    <p class="mb-4">Daftar List Mahasiswa .</p>
+                    <h1 class="h3 mb-2 text-gray-800">Daftar Mahasiswa</h1>
+                    <p class="mb-4">Daftar List Mahasiswa Bimbingan.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-success">Data Tabel nilai</h6>
+                            <h6 class="m-0 font-weight-bold text-success">Data List Mahasiswa Bimbingan</h6>
                         </div>
 
                 
@@ -327,11 +327,11 @@
                                         
 
                                         <td>
-                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id_mhs'];?>">
-                            Ubah
-                            </button>
+                                <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id_mhs'];?>">
+                                Ubah
+                                </button> -->
    
-        <div class="modal fade" id="exampleModal<?php echo $row['id_mhs'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- <div class="modal fade" id="exampleModal<?php echo $row['id_mhs'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
@@ -401,7 +401,7 @@
                 <button type="submit" class="btn btn-primary">Simpan</button>
             </div>
             </form>
-            </div>
+            </div> -->
         </div>
         </div>
                                       

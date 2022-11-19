@@ -9,12 +9,12 @@ body {
 }
 
 a {
-  color: #106314;
+  color: #b31919;
   text-decoration: none;
 }
 
 a:hover {
-  color: #07a715;
+  color: #b31919;
   text-decoration: none;
 }
 
@@ -39,7 +39,7 @@ section {
   letter-spacing: 1px;
   font-weight: 700;
   margin: 0;
-  color: #0a5a19;
+  color: #b31919;
   text-transform: uppercase;
 }
 .section-header p {
@@ -48,7 +48,7 @@ section {
   font-size: 38px;
   line-height: 42px;
   font-weight: 700;
-  color: #0a5a19;
+  color: #b31919;
 }
 @media (max-width: 768px) {
   .section-header p {
@@ -62,7 +62,7 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 15px 0;
-  background: #0a5a19;
+  background: #b31919;
   min-height: 40px;
   margin-top: 82px;
   color: #fff;
@@ -111,7 +111,7 @@ section {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background: #0b7e28;
+  background: #b31919;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -123,7 +123,7 @@ section {
   line-height: 0;
 }
 .back-to-top:hover {
-  background: #348A0C;
+  background: #e22a1d;
   color: #fff;
 }
 .back-to-top.active {
@@ -163,7 +163,7 @@ section {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #348A0C;
+  color: #b31919;
   font-family: "Nunito", sans-serif;
   margin-top: 3px;
 }
@@ -195,7 +195,7 @@ section {
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   font-weight: 700;
-  color: #348A0C;
+  color: #b31919;
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -205,10 +205,10 @@ section {
   margin-left: 5px;
 }
 .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-  color: #348A0C;
+  color: #b31919;
 }
 .navbar .getstarted, .navbar .getstarted:focus {
-  background: #348A0C;
+  background: #b31919;
   padding: 8px 20px;
   margin-left: 30px;
   border-radius: 4px;
@@ -216,7 +216,7 @@ section {
 }
 .navbar .getstarted:hover, .navbar .getstarted:focus:hover {
   color: #fff;
-  background: #348A0C;
+  background: #b31919;
 }
 .navbar .dropdown ul {
   display: block;
@@ -246,7 +246,7 @@ section {
   font-size: 12px;
 }
 .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
-  color: #348A0C;
+  color: #b31919;
 }
 .navbar .dropdown:hover > ul {
   opacity: 1;
@@ -277,7 +277,7 @@ section {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #0a5a19;
+  color: #b31919;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -304,7 +304,7 @@ section {
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(22, 131, 8, 0.9);
+  background: rgba(248, 57, 32, 0.9);
   transition: 0.3s;
 }
 .navbar-mobile .mobile-nav-toggle {
@@ -328,10 +328,10 @@ section {
 .navbar-mobile a, .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #348A0C;
+  color: #b31919;
 }
 .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
-  color: #348A0C;
+  color: #b31919;
 }
 .navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
   margin: 15px;
@@ -357,7 +357,7 @@ section {
   font-size: 12px;
 }
 .navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
-  color: #348A0C;
+  color: #b31919;
 }
 .navbar-mobile .dropdown > .dropdown-active {
   display: block;
@@ -376,7 +376,7 @@ section {
   margin: 0;
   font-size: 48px;
   font-weight: 700;
-  color: #0a5a19;
+  color: #b31919;
 }
 .hero h2 {
   color: #444444;
@@ -390,7 +390,7 @@ section {
   border-radius: 4px;
   transition: 0.5s;
   color: #fff;
-  background: #1f490d;
+  background: #b31919;
   box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
 }
 .hero .btn-get-started span {
@@ -456,13 +456,13 @@ section {
 .about h3 {
   font-size: 14px;
   font-weight: 700;
-  color: #0a5a19;
+  color: #b31919;
   text-transform: uppercase;
 }
 .about h2 {
   font-size: 24px;
   font-weight: 700;
-  color: #0a5a19;
+  color: #b31919;
 }
 .about p {
   margin: 15px 0 30px 0;
@@ -474,7 +474,7 @@ section {
   border-radius: 4px;
   transition: 0.5s;
   color: #fff;
-  background: #0a5a19;
+  background: #b31919;
   box-shadow: 0px 5px 25px rgba(65, 84, 241, 0.3);
 }
 .about .btn-read-more span {
@@ -509,7 +509,7 @@ section {
 }
 .values .box h3 {
   font-size: 24px;
-  color: #0a5a19;
+  color: #b31919;
   font-weight: 700;
   margin-bottom: 18px;
 }
@@ -538,13 +538,13 @@ section {
   font-size: 42px;
   line-height: 0;
   margin-right: 20px;
-  color: #0a5a19;
+  color: #b31919;
 }
 .counts .count-box span {
   font-size: 36px;
   display: block;
   font-weight: 600;
-  color: #0a5a19;
+  color: #b31919;
 }
 .counts .count-box p {
   padding: 0;
@@ -564,7 +564,7 @@ section {
 }
 .features .feature-box h3 {
   font-size: 18px;
-  color: #0a5a19;
+  color: #b31919;
   font-weight: 700;
   margin: 0;
 }
@@ -578,14 +578,14 @@ section {
   transition: 0.3s;
 }
 .features .feature-box:hover i {
-  background: #348A0C;
+  background: #b31919;
   color: #fff;
 }
 .features .feture-tabs {
   margin-top: 120px;
 }
 .features .feture-tabs h3 {
-  color: #0a5a19;
+  color: #b31919;
   font-weight: 700;
   font-size: 32px;
   margin-bottom: 10px;
@@ -600,21 +600,21 @@ section {
 }
 .green .active a,
 .green .active a:hover {
-    background-color: rgb(4, 158, 25);
+    background-color: rgb(214, 33, 33);
 }
 .features .feture-tabs .nav-link {
   background: none;
   text-transform: uppercase;
   font-size: 15px;
   font-weight: 600;
-  color: #0a5a19;
+  color: #b31919;
   padding: 12px 0;
   margin-right: 25px;
   margin-bottom: -2px;
   border-radius: 0;
 }
 .features .feture-tabs .nav-link.active {
-  color: #0a5a19;
+  color: #b31919;
   border-bottom: 3px solid #0a5a19;
 }
 .features .feture-tabs .tab-content h4 {
@@ -1376,11 +1376,11 @@ section {
   transition: 0.3s;
 }
 .blog .entry .entry-title a:hover {
-  color: #348A0C;
+  color: #b31919;
 }
 .blog .entry .entry-meta {
   margin-bottom: 15px;
-  color: #348A0C;
+  color: #b31919;
 }
 .blog .entry .entry-meta ul {
   display: flex;
@@ -1413,7 +1413,7 @@ section {
 }
 .blog .entry .entry-content .read-more a {
   display: inline-block;
-  background: #348A0C;
+  background: #b31919;
   color: #fff;
   padding: 6px 20px;
   transition: 0.3s;
@@ -1421,7 +1421,7 @@ section {
   border-radius: 4px;
 }
 .blog .entry .entry-content .read-more a:hover {
-  background: #348A0C;
+  background: #b31919;
 }
 .blog .entry .entry-content h3 {
   font-size: 22px;
@@ -1810,13 +1810,13 @@ section {
   font-size: 16px;
   padding: 0 30px;
   margin: 3px;
-  background: #348A0C;
+  background: #b31919;
   color: #fff;
   transition: 0.3s;
   border-radius: 4px;
 }
 .footer .footer-newsletter form input[type=submit]:hover {
-  background: #348A0C;
+  background: #b31919;
 }
 .footer .footer-top {
   background-size: contain;

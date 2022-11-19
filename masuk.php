@@ -6,22 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="assets/img/favicon1.png" rel="icon">
+    <link href="assets/img/faviconumc.png" rel="icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- font awesome  -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
-    <title>Computer Education</title>
+    <title>Sistem Informasi  & Registrasi PKL- Masuk</title>
   </head>
   <body>
  <style>
     body {
-  background-image: url("assets/img/abstrac1.png");
+  background-image: url("assets/img/bgmerah6.png");
     }
   </style>
 
 <div class="m-4" >
     <a class="navbar-brand" href="index.php" >
-        <img src="assets/img/logo_ce.png"  alt="" width="160" height="40" class="d-inline-block align-text-top">
+        <img src="assets/img/faviconumc.png"  alt="" width="70" height="40" class="d-inline-block align-text-top">
     </a>  
 </div>
   <div style="display: flex;
@@ -35,8 +35,8 @@
     padding: 20px;">
   <div class="card shadow-sm" style="width: 27rem;" >
   <div class="card-body">
-    <h1 class="card-title" style="color: #348A0C;">Masuk Akun</h1>
-    <p class="card-text" style="color: #348A0C;">Silahkan  masuk ke akunmu.</p>
+    <h1 class="card-title" style="color: #b31919;">Masuk Akun</h1>
+    <p class="card-text" style="color: #b31919;">Silahkan  masuk ke akunmu.</p>
     <form method="POST"  action="login_action.php">
       <div class="col-12">
         <div class="mb-3">
@@ -59,13 +59,13 @@
             <label class="form-check-label" for="exampleCheck1">ingat saya</label>
         </div>
         <div class="d-grid mx-auto">
-            <button class="btn btn-large btn-block btn-success tombol" type="submit" value="login">Masuk</button>
+            <button class="btn btn-large btn-block btn-danger tombol" type="submit" value="login">Masuk</button>
         </div>
     </form>
     
     <div class="d-flex py-2 mt-3 border-top">
-    <p class="card-text">Belum punya akun?</p>
-    <a  href="#"style="color: #348A0C;">Hubungi admin</a>
+    <!-- <p class="card-text">Belum punya akun?</p>
+    <a  href="#"style="color: blue;">Hubungi admin</a> -->
     </div>
   </div>
 </div>

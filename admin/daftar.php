@@ -241,9 +241,12 @@
 
 
                                          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                                        <!-- <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
                                         Tambah Peserta 
-                                        </button>
+                                        </button> -->
+                                        <p> Pada List Pengajuan PKL ini,  Anda dapat menerima pengajuan PKL & Mencetak Surat Pengajuan PKL Mahasiswa.</p><br>
+                                        
+                                        <p> </p>
                 
                     </div>
                     <!-- <a href="export_daftar.php" class="d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i

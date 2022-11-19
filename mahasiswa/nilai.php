@@ -14,90 +14,89 @@ session_start();
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Computer Education- Dashboard</title>
+    <title>Sistem Informasi & Registrasi PKL- Nilai</title>
 
-    <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="../assets/img/favicon1.png" rel="icon">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+<!-- Custom fonts for this template-->
+<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link href="../assets/img/faviconumc.png" rel="icon">
+<link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
 
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+<!-- Custom styles for this template-->
+<link href="css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
 <body id="page-top">
 
-    <!-- Page Wrapper -->
-    <div id="wrapper">
+<!-- Page Wrapper -->
+<div id="wrapper">
 
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-danger sidebar sidebar-dark accordion" id="accordionSidebar">
 
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
-                <div class="sidebar-brand-icon">
-                    <img src="../assets/img/favicon1.png" alt="" width="43" height="45" class="d-inline-block align-text-top">
-                </div>
-                <div class="sidebar-brand-text mx-3">Registrasi PKL </div>
-            </a>
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
+            <div class="sidebar-brand-icon">
+                <img src="../assets/img/faviconumc.png" alt="" width="43" height="45" class="d-inline-block align-text-top">
+            </div>
+            <div class="sidebar-brand-text mx-3">SI & REG PKL </div>
+        </a>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="dashboard.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item ">
+            <a class="nav-link" href="dashboard.php">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Dashboard</span></a>
+        </li>
+        <hr class="sidebar-divider">
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Info
+        </div>
 
-            <li class="nav-item active">
-                <a class="nav-link" href="profile.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Profil</span></a>
-            </li>
 
-            <li class="nav-item active">
-                <a class="nav-link" href="nilai.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Nilai</span></a>
-            </li>
 
-            <li class="nav-item active">
-                <a class="nav-link" href="instansi.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Instansi</span></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="Bimbingan.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Bimbingan</span></a>
-            </li>
-            <li class="nav-item active">
+        <li class="nav-item ">
+            <a class="nav-link" href="profile.php">
+                <i class="fas fa-fw fa-user"></i>
+                <span>Profil</span></a>
+        </li>
+
+        <li class="nav-item active">
+            <a class="nav-link" href="nilai.php">
+                <i class="fas fa-fw fa-book-open"></i>
+                <span>Nilai</span></a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link" href="instansi.php">
+                <i class="fas fa-fw fa-landmark"></i>
+                <span>Instansi</span></a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link" href="Bimbingan.php">
+                <i class="fas fa-fw fa-user-friends   "></i>
+                <span>Bimbingan</span></a>
+        </li>
+        
+        <!-- Divider -->
+        <!-- Divider -->
+        
+        <hr class="sidebar-divider d-none d-md-block">
+        
+        
+            <li class="nav-item ">
                 <a class="nav-link" href="daftar.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="fas fa-clipboard-list "></i>
                     <span>Registrasi</span></a>
             </li>
+        <!-- Nav Item - Charts -->
 
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-            
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Interface
-            </div>
-            
-            <!-- Nav Item - Charts -->
-   
-            
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
+        
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
@@ -142,10 +141,10 @@ session_start();
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <!-- <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
-                                </a>
+                                </a> -->
             
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">

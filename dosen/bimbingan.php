@@ -33,70 +33,92 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Registrasi PKL- Dashboard</title>
+    <title>Sistem Informasi & Registrasi PKL- Bimbingan</title>
 
-    <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="../assets/img/favicon1.png" rel="icon">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+<!-- Custom fonts for this template-->
+<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link href="../assets/img/faviconumc.png" rel="icon">
+<link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
 
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+<!-- Custom styles for this template-->
+<link href="css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
-
 <body id="page-top">
 
-    <!-- Page Wrapper -->
-    <div id="wrapper">
+<!-- Page Wrapper -->
+<div id="wrapper">
 
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-danger sidebar sidebar-dark accordion" id="accordionSidebar">
 
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
-                <div class="sidebar-brand-icon">
-                    <img src="../assets/img/favicon1.png" alt="" width="43" height="45" class="d-inline-block align-text-top">
-                </div>
-                <div class="sidebar-brand-text mx-3">Registrasi PKL</div>
-            </a>
-            
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-            
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item s">
-                <a class="nav-link" href="dashboard.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="profile.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Profil</span></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="nilai.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Nilai</span></a>
-            </li>
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
+            <div class="sidebar-brand-icon">
+                <img src="../assets/img/faviconumc.png" alt="" width="43" height="45" class="d-inline-block align-text-top">
+            </div>
+            <div class="sidebar-brand-text mx-3">SI & REG PKL </div>
+        </a>
 
-            <li class="nav-item active">
-                <a class="nav-link" href="bimbingan.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Bimbingan</span></a>
-            </li>
-            <li class="nav-item active">
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item ">
+            <a class="nav-link" href="dashboard.php">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Dashboard</span></a>
+        </li>
+        <hr class="sidebar-divider">
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Info
+        </div>
+
+
+
+        <li class="nav-item ">
+            <a class="nav-link" href="profile.php">
+                <i class="fas fa-fw fa-user"></i>
+                <span>Profil</span></a>
+        </li>
+
+
+        <li class="nav-item ">
+            <a class="nav-link" href="instansi.php">
+                <i class="fas fa-fw fa-landmark"></i>
+                <span>Instansi</span></a>
+        </li>
+
+        <li class="nav-item">
                 <a class="nav-link" href="mahasiswa.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="fas fa-fw fa-users"></i>
                     <span>Mahasiswa</span></a>
             </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+        
+        <!-- Divider -->
+        <!-- Divider -->
+        
+        <hr class="sidebar-divider d-none d-md-block">
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="nilai.php">
+                <i class="fas fa-fw fa-book-open"></i>
+                <span>Nilai</span></a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="Bimbingan.php">
+                <i class="fas fa-fw fa-user-friends   "></i>
+                <span>Bimbingan</span></a>
+        </li>
+        <!-- Nav Item - Charts -->
+
+
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -176,7 +198,7 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-success">Data Tabel Bimbingan</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Data Tabel Bimbingan</h6>
                         </div>
 
                 
@@ -318,15 +340,15 @@
                                         
 
                                         <td>
-                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id_daftar'];?>">
-                            Ubah
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<?php echo $row['id_daftar'];?>">
+                            Atur
                             </button>
    
         <div class="modal fade" id="exampleModal<?php echo $row['id_daftar'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Edit nilai</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Atur Bimbingan</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -353,7 +375,7 @@
                         </div>
     
                         <div class="row mb-3">
-                        <label for="Nama" class="col-sm-2 col-form-label">Jadwal Bimbingan</label>
+                        <label for="Nama" class="col-sm-2 col-form-label">tanggal</label>
                         <div class="col-sm-10">
                         <input type="date" class="form-control" value="<?php echo $row['jdwl_bimbing']; ?>" name="jdwl_bimbing" autofocus="" required="" />
                         </div>

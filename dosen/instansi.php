@@ -86,36 +86,39 @@
                 <span>Profil</span></a>
         </li>
 
-        <li class="nav-item ">
-            <a class="nav-link" href="nilai.php">
-                <i class="fas fa-fw fa-book-open"></i>
-                <span>Nilai</span></a>
-        </li>
+
         <li class="nav-item active">
             <a class="nav-link" href="instansi.php">
                 <i class="fas fa-fw fa-landmark"></i>
                 <span>Instansi</span></a>
         </li>
-        <li class="nav-item ">
-            <a class="nav-link" href="Bimbingan.php">
-                <i class="fas fa-fw fa-user-friends   "></i>
-                <span>Bimbingan</span></a>
-        </li>
+
+        <li class="nav-item">
+                <a class="nav-link" href="mahasiswa.php">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Mahasiswa</span></a>
+            </li>
+
         
         <!-- Divider -->
         <!-- Divider -->
         
         <hr class="sidebar-divider d-none d-md-block">
         
+        <li class="nav-item ">
+            <a class="nav-link" href="nilai.php">
+                <i class="fas fa-fw fa-book-open"></i>
+                <span>Nilai</span></a>
+        </li>
         
-            <li class="nav-item ">
-                <a class="nav-link" href="daftar.php">
-                    <i class="fas fa-clipboard-list "></i>
-                    <span>Registrasi</span></a>
-            </li>
+        <li class="nav-item ">
+            <a class="nav-link" href="Bimbingan.php">
+                <i class="fas fa-fw fa-user-friends   "></i>
+                <span>Bimbingan</span></a>
+        </li>
         <!-- Nav Item - Charts -->
 
-        
+
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">

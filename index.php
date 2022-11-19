@@ -7,13 +7,13 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta name="google-site-verification" content="7fI6NwUVytvCca5733F3-aHeZdU8S7asIBGpX_Abevo" />
 
-  <title>Computer Education</title>
+  <title>Sistem Informasi  & Registrasi PKL</title>
   <meta content="" name="description">
 
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon1.png" rel="icon">
+  <link href="assets/img/faviconumc.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -29,7 +29,7 @@
 
 
    <!-- Template Main CSS File -->
- <link href="assets/css/styles.css" rel="stylesheet">
+ <link href="assets/css/styles1.css" rel="stylesheet">
 
 
 </head>
@@ -41,7 +41,7 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="#home" class="logo d-flex align-items-center">
-      <img src="assets/img/logo_ce.png" alt="" width="150" height="80" class="d-inline-block align-text-top">
+      <img src="assets/img/faviconumc.png" alt="" width="70" height="80" class="d-inline-block align-text-top">
       </a>
 
       <nav id="navbar" class="navbar">
@@ -66,19 +66,19 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="zoom-out" data-aos-delay="200">
-          <h1 >Registrasi PKL Mahasiswa</h1>
-          <h2 >Membangun Mahasiswa Berteknologi berlandaskan islami</h2>
+          <h1 >Sistem Informasi & Registrasi PKL Mahasiswa</h1>
+          <h2 >Mensukseskan program PKL mahasiswa</h2>
           <div >
             <div class="text-center text-lg-start">
-              <a href="#sejarah" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                <span>Get Started</span>
+              <a href="#" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <!-- <span>Get Started</span> -->
                 <i class="bi bi-arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
         <div class="col-lg-6 " data-aos="zoom-out" data-aos-delay="200">
-          <img src="assets/img/maskot.png" class="img-fluid" alt="">
+          <img src="assets/img/pklumc.jpg" class="img-fluid" alt="">
         </div>
       </div>
     </div>
@@ -94,45 +94,29 @@
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-info">
-            <a href="#" class="logo d-flex align-items-center">
+            <a href="#" class="logo d-flex mb-3 align-items-center">
               <!-- <img src="assets/img/logo.png" alt=""> -->
- 
-              <span>Computer Education</span>
+        
+              <span>Registrasi PKL</span>
+        
             </a>
-            <p>Unit Kegiatan Mahasiswa Computer Education adalah sarana pengembangan Mahasiswa di bidang IPTEK.</p>
+            <p>Mensukseskan program PKL mahasiswa.</p>
             <div class="social-links mt-3">
 
-              <a href="http://instagram.com/computereducation_" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="https://www.youtube.com/channel/UCdtVMq63VKfnjJGDr5O1Kkw/featured" class="youtube"><i class="bi bi-youtube"></i></a>
+              <a href="http://instagram.com/luckysptra__" class="instagram"><i class="bi bi-instagram"></i></a>
+             
 
             </div>
           </div>
 
           <div class="col-lg-2 col-6 footer-links">
-            <h4>Links</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#sejarah">Sejarah</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#divisi">Divisi</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#pengurus">Pengurus</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#galeri">Galeri</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#artikel">Artikel</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Divisi</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#divisi">Organisasi</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#divisi">Komputer</a></li>
-
-            </ul>
+ -->
           </div>
 
           <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
             <h4>Kontak Kami </h4>
               <strong>Email:</strong> <br>
-              Computer.education1306@gmail.com<br>
+              Luckysaputraa17@gmail.com<br>
             </p>
 
           </div>
@@ -143,7 +127,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Computer Education</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Lucky Saputra </span></strong>. All Rights Reserved
       </div>
     </div>
   </footer><!-- End Footer -->

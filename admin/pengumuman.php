@@ -39,117 +39,121 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Computer Education- Dashboard</title>
+    <title>Sistem Informasi & Registrasi PKL- Dashboard</title>
 
-    <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="../assets/img/favicon1.png" rel="icon">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+<!-- Custom fonts for this template-->
+<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link href="../assets/img/faviconumc.png" rel="icon">
+<link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
 
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+<!-- Custom styles for this template-->
+<link href="css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
-
 <body id="page-top">
 
-    <!-- Page Wrapper -->
-    <div id="wrapper">
+<!-- Page Wrapper -->
+<div id="wrapper">
 
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-danger  sidebar sidebar-dark accordion" id="accordionSidebar">
 
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
-                <div class="sidebar-brand-icon">
-                    <img src="../assets/img/favicon1.png" alt="" width="43" height="45" class="d-inline-block align-text-top">
-                </div>
-                <div class="sidebar-brand-text mx-3">Computer Education </div>
-            </a>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="dashboard.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-                </li>
-                <!-- Divider -->
-                <hr class="sidebar-divider">
-                
-                <!-- Heading -->
-                <div class="sidebar-heading">
-                    Interface
-                </div>
-                <!-- Nav Item - Tables -->
-                <li class="nav-item">
-                    <a class="nav-link" href="mahasiswa.php">
-                        <i class="fas fa-fw fa-table"></i>
-                        <span>Mahasiswa</span></a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="pembimbing.php">
-                        <i class="fas fa-fw fa-table"></i>
-                        <span>Pembimbing</span></a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="instansi.php">
-                        <i class="fas fa-fw fa-table"></i>
-                        <span>Instansi</span></a>
-                </li>
-
-                <li class="nav-item">
-                        <a class="nav-link" href="data_peserta.php">
-                            <i class="fas fa-fw fa-table"></i>
-                            <span>Data peserta PKL</span></a>
-                    </li>
-                <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Addons
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
+            <div class="sidebar-brand-icon">
+                <img src="../assets/img/faviconumc.png" alt="" width="43" height="45" class="d-inline-block align-text-top">
             </div>
-                <li class="nav-item">
-                        <a class="nav-link" href="form_pendaftaran.php">
-                            <i class="fas fa-fw fa-table"></i>
-                            <span>Form Pendaftaran PKL</span></a>
-                    </li>
+            <div class="sidebar-brand-text mx-3">SI & Reg PKL </div>
+        </a>
 
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="pengumuman.php">
-                            <i class="fas fa-fw fa-table"></i>
-                            <span>Kelola Pengumuman</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="users.php">
-                            <i class="fas fa-fw fa-table"></i>
-                            <span>Kelola Akun</span></a>
-                    </li>
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item ">
+            <a class="nav-link" href="dashboard.php">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Dashboard</span></a>
+        </li>
 
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+        
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Data
+        </div>
+        
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+            <a class="nav-link" href="mahasiswa.php">
+                <i class="fas fa-fw fa-user"></i>
+                <span>Mahasiswa</span></a>
+        </li>
 
-            <!-- Nav Item - Charts -->
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="pembimbing.php">
+                    <i class="fas fa-fw fa-user-graduate"></i>
+                    <span>Pembimbing</span></a>
+            </li>
 
+            <li class="nav-item">
+                <a class="nav-link" href="instansi.php">
+                    <i class="fas fa-fw fa-landmark"></i>
+                    <span>Instansi</span></a>
+            </li>
+        <!-- Nav Item - Pages Collapse Menu -->
+
+        <li class="nav-item">
+                    <a class="nav-link" href="data_peserta.php">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Peserta PKL</span></a>
+                </li>
             <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+        <hr class="sidebar-divider">
 
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Kelola
+        </div>
+            <li class="nav-item">
+                    <a class="nav-link" href="daftar.php">
+                        <i class="fas fa-fw fa-clipboard-check"></i>
+                        <span>Pengajuan PKL</span></a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="pengumuman.php">
+                        <i class="fas fa-fw fa-bell"></i>
+                        <span>Pengumuman</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="users.php">
+                        <i class="fas fa-fw fa-user-circle"></i>
+                        <span>Akun</span></a>
+                </li>
+
+        <!-- Nav Item - Charts -->
+
+        
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
 
 
 
-        </ul>
-        <!-- End of Sidebar -->
+    </ul>
+    <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -191,10 +195,10 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <!-- <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
-                                </a>
+                                </a> -->
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -213,18 +217,18 @@
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Pengumuman</h1>
-                    <p class="mb-4">Pengumuman Computer Education.</p>
+                    <p class="mb-4">Pengumuman PKL.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-success">Data Tabel Pengumuman</h6>
+                            <h6 class="m-0 font-weight-bold text-danger">Data Tabel Pengumuman</h6>
                         </div>
                        
                                         <center><h3>Data Pengumuman</h3><center>
                                            
                                                          <!-- Button trigger modal -->
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
   Tambah Pengumuman
 </button>
     <br>
@@ -253,7 +257,7 @@
                             <div class="row mb-3">
                             <label for="isi" class="col-sm-2 col-form-label">Isi</label>
                             <div class="col-sm-10">
-                            <input type="text" class="form-control" name="isi"  />
+                            <textarea type="text" class="form-control" name="isi" rows="5"></textarea>
                             </div>
                             </div>
 
@@ -319,7 +323,7 @@
                         <td  scope="row"><?php echo $row['tanggal']; ?></td>
                     
                         <td  scope="row">
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id_pengumuman'];?>">
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal<?php echo $row['id_pengumuman'];?>">
                             Edit
                             </button>
    
@@ -351,13 +355,13 @@
                             <div class="row mb-3">
                             <label for="isi" class="col-sm-2 col-form-label">Isi</label>
                             <div class="col-sm-10">
-                            <input type="text" class="form-control"  value="<?php echo $row['isi']; ?>"  name="isi" required="" />
+                            <textarea type="text" class="form-control" rows="5"  value="<?php echo $row['isi']; ?>"  name="isi" required="" ><?php echo $row['isi']; ?></textarea>
                             </div>
                             </div>
 
                             <div class="row mb-3">
-                            <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
-                            <div class="col-sm-9">
+                            <label for="tanggal" class="col-sm-2 col-form-label">tanggal</label>
+                            <div class="col-sm-10">
                             <input type="date" class="form-control"  value="<?php echo $row['tanggal']; ?>"  name="tanggal" required="" />
                             </div>
                             </div>
@@ -391,7 +395,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Computer Education 2022</span>
+                        <span>Copyright &copy; Lucky Saputra</span>
                     </div>
                 </div>
             </footer>

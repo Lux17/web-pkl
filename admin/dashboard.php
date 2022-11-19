@@ -14,11 +14,11 @@ session_start();
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Computer Education- Dashboard</title>
+    <title>Sistem Informasi & Registrasi PKL- Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="../assets/img/favicon1.png" rel="icon">
+    <link href="../assets/img/faviconumc.png" rel="icon">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
@@ -34,14 +34,14 @@ session_start();
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-danger  sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
                 <div class="sidebar-brand-icon">
-                    <img src="../assets/img/favicon1.png" alt="" width="43" height="45" class="d-inline-block align-text-top">
+                    <img src="../assets/img/faviconumc.png" alt="" width="43" height="45" class="d-inline-block align-text-top">
                 </div>
-                <div class="sidebar-brand-text mx-3">Registrasi PKL </div>
+                <div class="sidebar-brand-text mx-3">SI & Reg PKL </div>
             </a>
 
             <!-- Divider -->
@@ -59,26 +59,26 @@ session_start();
             
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                Data
             </div>
             
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="mahasiswa.php">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-user"></i>
                     <span>Mahasiswa</span></a>
             </li>
 
                 <!-- Nav Item - Tables -->
                 <li class="nav-item">
                     <a class="nav-link" href="pembimbing.php">
-                        <i class="fas fa-fw fa-table"></i>
+                        <i class="fas fa-fw fa-user-graduate"></i>
                         <span>Pembimbing</span></a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link" href="instansi.php">
-                        <i class="fas fa-fw fa-table"></i>
+                        <i class="fas fa-fw fa-landmark"></i>
                         <span>Instansi</span></a>
                 </li>
             <!-- Nav Item - Pages Collapse Menu -->
@@ -86,31 +86,31 @@ session_start();
             <li class="nav-item">
                         <a class="nav-link" href="data_peserta.php">
                             <i class="fas fa-fw fa-table"></i>
-                            <span>Data peserta PKL</span></a>
+                            <span>Peserta PKL</span></a>
                     </li>
                 <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Addons
+                Kelola
             </div>
                 <li class="nav-item">
-                        <a class="nav-link" href="form_pendaftaran.php">
-                            <i class="fas fa-fw fa-table"></i>
-                            <span>Form Pendaftaran PKL</span></a>
+                        <a class="nav-link" href="daftar.php">
+                            <i class="fas fa-fw fa-clipboard-check"></i>
+                            <span>Pengajuan PKL</span></a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="pengumuman.php">
-                            <i class="fas fa-fw fa-table"></i>
-                            <span>Kelola Pengumuman</span></a>
+                            <i class="fas fa-fw fa-bell"></i>
+                            <span>Pengumuman</span></a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="users.php">
-                            <i class="fas fa-fw fa-table"></i>
-                            <span>Kelola Akun</span></a>
+                            <i class="fas fa-fw fa-user-circle"></i>
+                            <span>Akun</span></a>
                     </li>
 
             <!-- Nav Item - Charts -->
@@ -164,11 +164,11 @@ session_start();
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <!-- <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
-            
+             -->
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -188,8 +188,8 @@ session_start();
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                        <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
                     </div>
 
                     <!-- Content Row -->
@@ -197,11 +197,11 @@ session_start();
 
                   
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                Sudah Registrasi PKL</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
                                            
@@ -218,7 +218,7 @@ session_start();
                                             </div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                            <i class="fas fa-check-circle fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -226,11 +226,11 @@ session_start();
                         </div>
 
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card border-left-danger shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Belum Registrasi PKL
+                                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Belum Registrasi PKL
                                             </div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
@@ -254,7 +254,7 @@ session_start();
                                             </div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                            <i class="fas fa-hourglass-start fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -319,7 +319,7 @@ session_start();
                                             </div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                            <i class="fas fa-user-graduate  fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -330,11 +330,11 @@ session_start();
 
 
                     <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
+                            <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 Jumlah Instansi</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
 
@@ -352,7 +352,7 @@ session_start();
                                             </div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-user fa-2x text-gray-300"></i>
+                                            <i class="fas fa-landmark fa-2x text-gray-300"></i>
                                             
                                         </div>
                                     </div>
@@ -365,6 +365,8 @@ session_start();
                     <div class="row">
                          <!-- Card Body -->
                         <div class="card-body mr-3">
+                        <h5>Pengumuman</h5>
+                        <hr>
                         <?php
                            
                            // jalankan query untuk menampilkan semua data diurutkan berdasarkan 

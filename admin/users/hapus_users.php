@@ -4,7 +4,7 @@ $id = $_GET["id"];
 //mengambil id yang ingin dihapus
 
     //jalankan query DELETE untuk menghapus data
-    $query = "DELETE FROM pengumuman WHERE id_pengumuman='$id' ";
+    $query = "DELETE FROM users WHERE iduser='$id' ";
     $hasil_query = mysqli_query($kon, $query);
 
     //periksa query, apakah ada kesalahan

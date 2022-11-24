@@ -125,7 +125,7 @@ session_start();
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-
+                    <div class="topbar-divider d-none d-sm-block"></div>
                     
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
@@ -165,7 +165,7 @@ session_start();
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Bimbingan</h1>
                     
                     </div>
 
@@ -203,10 +203,10 @@ session_start();
 
     <!-- Project Card Example -->
     <div class="card shadow mb-4">
-        <div class="card-header py-3">
+        <div class="card-header shadow border-left-danger py-3">
             <h6 class="m-0 font-weight-bold text-primary">Pemberitahuan</h6>
         </div>
-        <div class="card-body">
+        <div class="card-body border-left-danger">
         <p > Silahkan Menghubungi Dosen pembimbing terkait Jadwal Bimbingan Mahasiswa, Sebagai Syarat Sidang Mahasiswa Harus melakukan 8X bimbingan.</p>
             <div class="card-body">
 
@@ -226,10 +226,10 @@ session_start();
 
     <!-- Illustrations -->
     <div class="card shadow mb-4">
-        <div class="card-header py-3">
+        <div class="card-header border-left-success py-3">
             <h6 class="m-0 font-weight-bold text-primary"></h6>
         </div>
-        <div class="card-body">
+        <div class="card-body border-left-success">
             <div class="text-center">
             </div>
             <p > Instansi&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;: <?php echo $row['nama_inst']; ?></p>
@@ -240,7 +240,7 @@ session_start();
     </div>
 
     <!-- Approach -->
-    <div class="card shadow mb-4">
+    <div class="card shadow border-left-warning mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Bimbingan</h6>
         </div>

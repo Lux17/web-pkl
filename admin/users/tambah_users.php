@@ -3,12 +3,12 @@
 include 'koneksi.php';
 session_start();	
 	
-$judul = isset($_POST['judul']) ? $_POST['judul'] : '';
-$isi = isset($_POST['isi']) ? $_POST['isi'] : '';
-$tanggal = isset($_POST['tanggal']) ? $_POST['tanggal'] : '';
+$username = isset($_POST['username']) ? $_POST['username'] : '';
+$password = isset($_POST['password']) ? $_POST['password'] : '';
+$rolename = isset($_POST['rolename']) ? $_POST['rolename'] : '';
 
 
-$query = "INSERT INTO pengumuman (judul, isi, tanggal) VALUES ('$judul', '$isi', '$tanggal')";
+$query = "INSERT INTO users (username, password, rolename) VALUES ('$username', sha1('$password'), '$rolename')";
 $result = mysqli_query($kon, $query);
                   // periska query apakah ada error
 // $jumlah = mysqli_num_rows($result);
@@ -17,7 +17,7 @@ if(!$result){
     die ("Query gagal dijalankan: ".mysqli_errno($kon).
                                        " - ".mysqli_error($kon));
 } else {                      
-echo "<script>alert('Data berhasil ditambah.');window.location='../pengumuman.php';</script>";
+echo "<script>alert('Data berhasil ditambah.');window.location='../users.php';</script>";
 }
             
 

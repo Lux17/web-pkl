@@ -269,14 +269,14 @@
                         <section class="base align-items-center ">
 
                             <div class="row mb-3">
-                            <label for="nim" class="col-sm-2 col-form-label">NIM</label>
+                            <label for="nim" class="col-sm-3 col-form-label">NIM</label>
                             <div class="col-sm-8">
                             <input type="text" class="form-control" name="nim" autofocus=""  />
                             </div>
                             </div>
                             
                             <div class="row mb-3">
-                            <label for="Nama" class="col-sm-2 col-form-label">Nama</label>
+                            <label for="Nama" class="col-sm-3 col-form-label">Nama</label>
                             <div class="col-sm-8">
                             <input type="text" class="form-control" name="nama_mhs"  autofocus=""  />
                             </div>
@@ -284,15 +284,15 @@
 
                             
                             <div class="row mb-3">
-                            <label for="nohp_mhs" class="col-sm-2 col-form-label">NO HP</label>
+                            <label for="nohp_mhs" class="col-sm-3 col-form-label">NO HP</label>
                             <div class="col-sm-8">
                             <input type="text" class="form-control" name="nohp_mhs"   />
                             </div>
                             </div>
 
                             <div class="row mb-3">
-                            <label class="col-sm-2"> Prodi</label>
-                            <div class="input-group col-sm-10">
+                            <label class="col-sm-3"> Prodi</label>
+                            <div class="input-group col-sm-8">
                                 <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="prodi" required="" >
                                     <option selected value="">Pilih</option>
                                     <option value="S1 Teknik Informatika">S1 Teknik informatika</option>
@@ -319,21 +319,21 @@
 
                             
                             <div class="row mb-3">
-                            <label for="nama_pem" class="col-sm-2 col-form-label">Nama Pembimbing</label>
+                            <label for="nama_pem" class="col-sm-3 col-form-label">Pembimbing</label>
                             <div class="col-sm-8">
                             <input type="text" class="form-control" name="nama_pem" required=""  />
                             </div>
                             </div>
 
                             <div class="row mb-3">
-                            <label for="nohp_pem" class="col-sm-2 col-form-label">No HP Pembimbing</label>
+                            <label for="nohp_pem" class="col-sm-3 col-form-label">No HP</label>
                             <div class="col-sm-8">
                             <input type="text" class="form-control" name="nohp_pem"  />
                             </div>
                             </div>
 
                             <div class="row mb-3">
-                            <label for="nama_inst" class="col-sm-2 col-form-label">Nama Instansi</label>
+                            <label for="nama_inst" class="col-sm-3 col-form-label">Instansi</label>
                             <div class="col-sm-8">
                             <input type="text" class="form-control" name="nama_inst"  />
                             
@@ -341,7 +341,7 @@
                             </div>
 
                             <div class="row mb-3">
-                            <label for="alamat_inst" class="col-sm-2 col-form-label">Alamat</label>
+                            <label for="alamat_inst" class="col-sm-3 col-form-label">Alamat</label>
                             <div class="col-sm-8">
                             <input type="text" class="form-control" name="alamat_inst" />
                             </div>
@@ -350,7 +350,7 @@
                
 
                             <div class="row mb-3">
-                            <label for="nohp_inst" class="col-sm-2 col-form-label">No Telp</label>
+                            <label for="nohp_inst" class="col-sm-3 col-form-label">No Telp</label>
                             <div class="col-sm-8">
                             <input type="text" class="form-control" name="nohp_inst" />
                             </div>

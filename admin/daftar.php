@@ -368,6 +368,7 @@
                                             <th>No HP Mahasiswa</th>
                                             <th>Prodi</th>
                                             <th>Pembimbing</th>
+                                            <th>NIDN</th>
                                             <th>NO HP Pembimbing</th>
                                             <th>Nama Instansi</th>
                                             <th>Alamat Instansi</th>
@@ -385,6 +386,7 @@
                                             <th>No HP Mahasiswa</th>
                                             <th>Prodi</th>
                                             <th>Pembimbing</th>
+                                            <th>NIDN</th>
                                             <th>NO HP Pembimbing</th>
                                             <th>Nama Instansi</th>
                                             <th>Alamat Instansi</th>
@@ -530,8 +532,8 @@
                     
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                    <button type="cetak"  class="btn btn-warning">Cetak</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
+                    <button type="submit" name="cetak" value='print'  class="btn btn-warning">Cetak</button>
                     <button type="submit" name= "simpan" class="btn btn-primary">Terima</button>
                 </div>
             </form>

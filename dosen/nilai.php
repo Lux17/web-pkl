@@ -171,10 +171,10 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <!-- <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
-                                </a>
+                                </a> -->
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -315,90 +315,90 @@
                             <input type="hidden" value="<?php echo $row['id_daftar']; ?>" name="id_daftar" required="" />
                         </div>
                         <div class="row mb-3">
-                        <label for="Nama" class="col-sm-2 col-form-label">Nama</label>
-                        <div class="col-sm-10">
+                        <label for="Nama" class="col-sm-3 col-form-label">Nama</label>
+                        <div class="col-sm-9">
                         <input type="text" class="form-control" readonly value="<?php echo $row['nama_mhs']; ?>" name="nama_mhs" autofocus="" required="" />
                         </div>
                         </div>
 
                         <div class="row mb-3">
-                        <label for="No CE" class="col-sm-2 col-form-label">NIM</label>
-                        <div class="col-sm-10">
+                        <label for="No CE" class="col-sm-3 col-form-label">NIM</label>
+                        <div class="col-sm-9">
                         <input type="text" class="form-control" readonly value="<?php echo $row['nim']; ?>"  name="nim" required="" />
                         </div>
                         </div>
                         
                         
                         <div class="row mb-3">
-                            <label for="nilai_disiplin" class="col-sm-2 col-form-label">Disiplin</label>
-                            <div class="col-sm-10">
+                            <label for="nilai_disiplin" class="col-sm-3 col-form-label">Disiplin</label>
+                            <div class="col-sm-9">
                                 <input type="text"  class="form-control"  value="<?php echo $row['nilai_disiplin']; ?>" name="nilai_disiplin" required="" />
                             </div>
                         </div>
                         
                         <div class="row mb-3">
-                            <label for="nilai_tjwb" class="col-sm-2 col-form-label">Tangggung jawab</label>
-                            <div class="col-sm-10">
+                            <label for="nilai_tjwb" class="col-sm-3 col-form-label">Tangggung jawab</label>
+                            <div class="col-sm-9">
                                 <input type="text"  class="form-control"  value="<?php echo $row['nilai_tjwb']; ?>" name="nilai_tjwb" required="" />
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="nilai_inisiatif" class="col-sm-2 col-form-label">inisiatif</label>
-                            <div class="col-sm-10">
+                            <label for="nilai_inisiatif" class="col-sm-3 col-form-label">inisiatif</label>
+                            <div class="col-sm-9">
                                 <input type="text"  class="form-control"  value="<?php echo $row['nilai_inisiatif']; ?>" name="nilai_inisiatif" required="" />
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="nilai_loyal" class="col-sm-2 col-form-label">loyaliyas</label>
-                            <div class="col-sm-10">
+                            <label for="nilai_loyal" class="col-sm-3 col-form-label">loyaliyas</label>
+                            <div class="col-sm-9">
                                 <input type="text"  class="form-control"  value="<?php echo $row['nilai_loyal']; ?>" name="nilai_loyal" required="" />
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="nilai_kerja" class="col-sm-2 col-form-label">Kemampuan Bekerja</label>
-                            <div class="col-sm-10">
+                            <label for="nilai_kerja" class="col-sm-3 col-form-label">Kemampuan Bekerja</label>
+                            <div class="col-sm-9">
                                 <input type="text"  class="form-control"  value="<?php echo $row['nilai_kerja']; ?>" name="nilai_kerja" required="" />
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="nilai_kerjasama" class="col-sm-2 col-form-label">Kerja Sama</label>
-                            <div class="col-sm-10">
+                            <label for="nilai_kerjasama" class="col-sm-3 col-form-label">Kerja Sama</label>
+                            <div class="col-sm-9">
                                 <input type="text"  class="form-control"  value="<?php echo $row['nilai_kerjasama']; ?>" name="nilai_kerjasama" required="" />
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="nilai_keputusan" class="col-sm-2 col-form-label">Keputusan</label>
-                            <div class="col-sm-10">
+                            <label for="nilai_keputusan" class="col-sm-3 col-form-label">Keputusan</label>
+                            <div class="col-sm-9">
                                 <input type="text"  class="form-control"  value="<?php echo $row['nilai_keputusan']; ?>" name="nilai_keputusan" required="" />
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="nilai_sikap" class="col-sm-2 col-form-label">Sikap</label>
-                            <div class="col-sm-10">
+                            <label for="nilai_sikap" class="col-sm-3 col-form-label">Sikap</label>
+                            <div class="col-sm-9">
                                 <input type="text"  class="form-control"  value="<?php echo $row['nilai_sikap']; ?>" name="nilai_sikap" required="" />
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="nilai_jujur" class="col-sm-2 col-form-label">Jujur</label>
-                            <div class="col-sm-10">
+                            <label for="nilai_jujur" class="col-sm-3 col-form-label">Jujur</label>
+                            <div class="col-sm-9">
                                 <input type="text"  class="form-control"  value="<?php echo $row['nilai_jujur']; ?>" name="nilai_jujur" required="" />
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="nilai_hasilkerja" class="col-sm-2 col-form-label">Hasil Kerja</label>
-                            <div class="col-sm-10">
+                            <label for="nilai_hasilkerja" class="col-sm-3 col-form-label">Hasil Kerja</label>
+                            <div class="col-sm-9">
                                 <input type="text"  class="form-control"  value="<?php echo $row['nilai_hasilkerja']; ?>" name="nilai_hasilkerja" required="" />
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="nilai_penulisan" class="col-sm-2 col-form-label">Penulisan</label>
-                            <div class="col-sm-10">
+                            <label for="nilai_penulisan" class="col-sm-3 col-form-label">Penulisan</label>
+                            <div class="col-sm-9">
                                 <input type="text"  class="form-control"  value="<?php echo $row['nilai_penulisan']; ?>" name="nilai_penulisan" />
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="nilai_penelitian" class="col-sm-2 col-form-label">Penelitian</label>
-                            <div class="col-sm-10">
+                            <label for="nilai_penelitian" class="col-sm-3 col-form-label">Penelitian</label>
+                            <div class="col-sm-9">
                                 <input type="text"  class="form-control"  value="<?php echo $row['nilai_penelitian']; ?>" name="nilai_penelitian" />
                             </div>
                         </div>
@@ -408,7 +408,7 @@
                         
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
                 <button type="submit" class="btn btn-primary">Simpan</button>
             </div>
             </form>

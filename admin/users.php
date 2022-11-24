@@ -248,23 +248,36 @@
                         <section class="base align-items-center ">
 
                             <div class="row mb-3">
-                            <label for="username" class="col-sm-3 col-form-label">username</label>
+                            <label for="username" class="col-sm-3 col-form-label">Username</label>
                             <div class="col-sm-8">
                             <input type="text" class="form-control" name="username" autofocus="" required="" />
                             </div>
                             </div>
                             
                             <div class="row mb-3">
-                            <label for="password" class="col-sm-3 col-form-label">password</label>
+                            <label for="password" class="col-sm-3 col-form-label">Password</label>
                             <div class="col-sm-8">
-                            <input type="text" class="form-control" name="password"  />
+                            <input type="password" class="form-control" name="password" id="password" aria-describedby="passwordHelpInline" data-toggle="password"  />
+                            <div class= "input-group-append">
+                            <span class="input-group-text" onclick="password_show_hide();">
+                                <i class="mb-2 fas fa-eye" id="show_eye"></i>
+                                <i class="mb-2 fas fa-eye-slash d-none" id="hide_eye"></i>
+                            </span>
+                            </div>
                             </div>
                             </div>
 
                             <div class="row mb-3">
-                            <label for="rolename" class="col-sm-3 col-form-label">rolename</label>
-                            <div class="col-sm-8">
-                            <input type="text" class="form-control" name="rolename"  />
+                            <label class="col-sm-3"> Rolename</label>
+                            <div class="input-group col-sm-8">
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="rolename" required="" >
+                                <option selected value="">Pilih</option> 
+                                <option value="admin">Admin</option>
+                                <option  value="pembimbing">Pembimbing</option>
+                                <option  value="mahasiswa">Mahasiswa</option>
+                                </select>
+                                <div class="input-group-append">
+                            </div>
                             </div>
                             </div>
 
@@ -290,9 +303,9 @@
                     <thead>
                         <tr>
                         <th scope="col">No</th>
-                        <th scope="col">username</th>
-                        <th scope="col">password users</th>
-                        <th scope="col">rolename</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">Rolename</th>
                         <th scope="col"></th>
                    
                         </tr>
@@ -354,16 +367,30 @@
                             <div class="row mb-3">
                             <label for="password" class="col-sm-3 col-form-label">password</label>
                             <div class="col-sm-8">
-                            <input type="text" class="form-control"  value="<?php echo $row['password']; ?>"  name="password" required="" />
+                            <input type="text" class="form-control" name="password" required="" />
                             </div>
                             </div>
 
                             <div class="row mb-3">
+                            <label class="col-sm-3"> Rolename</label>
+                            <div class="input-group col-sm-8">
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="rolename" required="" >
+                                <option selected value="<?php echo $row['rolename']; ?>"><?php echo $row['rolename']; ?></option> 
+                                <option value="admin">admin</option>
+                                <option  value="pembimbing">pembimbing</option>
+                                <option  value="mahasiswa">mahasiswa</option>
+                                </select>
+                                <div class="input-group-append">
+                            </div>
+                            </div>
+                            </div>
+
+                            <!-- <div class="row mb-3">
                             <label for="rolename" class="col-sm-3 col-form-label">rolename</label>
                             <div class="col-sm-8">
                             <input type="text" class="form-control"  value="<?php echo $row['rolename']; ?>"  name="rolename" required="" />
                             </div>
-                            </div>
+                            </div> -->
 
                             </div>
 
@@ -430,7 +457,23 @@
             </div>
         </div>
     </div>
-
+    <script type="text/javascript">
+    function password_show_hide() {
+    var x = document.getElementById("password");
+    var show_eye = document.getElementById("show_eye");
+    var hide_eye = document.getElementById("hide_eye");
+    hide_eye.classList.remove("d-none");
+    if (x.type === "password") {
+        x.type = "text";
+        show_eye.style.display = "none";
+        hide_eye.style.display = "block";
+    } else {
+        x.type = "password";
+        show_eye.style.display = "block";
+        hide_eye.style.display = "none";
+    }
+    }
+    </script>
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

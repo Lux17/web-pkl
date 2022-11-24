@@ -125,7 +125,7 @@ session_start();
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-
+                    <div class="topbar-divider d-none d-sm-block"></div>
                     
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
@@ -142,11 +142,11 @@ session_start();
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <!-- <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
-            
+             -->
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -200,7 +200,7 @@ session_start();
                         <div class="col-md-6 col-md-6 align-items-center">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
-                                <div class="card shadow mb-4">
+                                <div class="card shadow border-left-danger  mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary"><?php echo $row['judul']; ?></h6>
                                 </div>
@@ -213,11 +213,12 @@ session_start();
             
                             </div>
                         </div>
-                    </div>
-
-                    <?php
+                        <?php
                            };
                     ?>
+                    </div>
+
+
 
                 </div>
                 <!-- /.container-fluid -->

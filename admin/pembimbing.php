@@ -268,10 +268,10 @@
                             <div class="row mb-3">
                             <label class="col-sm-2"> JK</label>
                             <div class="input-group col-sm-10">
-                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="jk_pem" >
-                                 
-                                    <option value="Laki-laki">Laki-laki</option>
-                                    <option  value="Perempuan">Perempuan</option>
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="jk_pem" required="" >
+                                <option selected value="">Pilih</option> 
+                                <option value="Laki-laki">Laki-laki</option>
+                                <option  value="Perempuan">Perempuan</option>
                                 </select>
                                 <div class="input-group-append">
                             </div>

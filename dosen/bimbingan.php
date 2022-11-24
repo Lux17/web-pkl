@@ -171,10 +171,10 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <!-- <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
-                                </a>
+                                </a> -->
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -361,22 +361,22 @@
                             <input type="hidden" value="<?php echo $row['id_daftar']; ?>" name="id_daftar" required="" />
                         </div>
                         <div class="row mb-3">
-                        <label for="Nama" class="col-sm-2 col-form-label">Nama</label>
-                        <div class="col-sm-10"> 
+                        <label for="Nama" class="col-sm-3 col-form-label">Nama</label>
+                        <div class="col-sm-8"> 
                         <input type="text" class="form-control" readonly value="<?php echo $row['nama_mhs']; ?>" name="nama_mhs" autofocus="" required="" />
                         </div>
                         </div>
 
                         <div class="row mb-3">
-                        <label for="No CE" class="col-sm-2 col-form-label">NIM</label>
-                        <div class="col-sm-10">
+                        <label for="No CE" class="col-sm-3 col-form-label">NIM</label>
+                        <div class="col-sm-8">
                         <input type="text" class="form-control" readonly value="<?php echo $row['nim']; ?>"  name="nim" required="" />
                         </div>
                         </div>
     
                         <div class="row mb-3">
-                        <label for="Nama" class="col-sm-2 col-form-label">tanggal</label>
-                        <div class="col-sm-10">
+                        <label for="Nama" class="col-sm-3 col-form-label">tanggal</label>
+                        <div class="col-sm-8">
                         <input type="date" class="form-control" value="<?php echo $row['jdwl_bimbing']; ?>" name="jdwl_bimbing" autofocus="" required="" />
                         </div>
                         </div>
@@ -388,11 +388,11 @@
                         </div>
                         </div> -->
     
-                        <div>
-                            <label> Jumlah Bimbingan</label>
-                            <div class="input-group">
-                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="jmlh_bimbingan" >
-                                    <option selected ><?php echo $row['jmlh_bimbingan']; ?></option>
+                        <div class="row mb-3">
+                            <label class="col-sm-3"> Jmlh Bimbingan</label>
+                            <div class="input-group col-sm-8">
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="jmlh_bimbingan" required="" >
+                                <option selected ><?php echo $row['jmlh_bimbingan']; ?></option>
                                     <option value="1">1</option>
                                     <option  value="2">2</option>
                                     <option value="3">3</option>
@@ -401,21 +401,22 @@
                                     <option  value="6">6</option>
                                     <option value="7">7</option>
                                     <option  value="8">8</option>
-                                    
-
                                 </select>
-                                <div class="input-group-append">
+
                             </div>
-           
+                            </div>
+                            </div>
+
+
            
 
                         </section>
-                        
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                        <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
                 <button type="submit" class="btn btn-primary">Simpan</button>
             </div>
+            </div>
+
             </form>
             </div>
         </div>

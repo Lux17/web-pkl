@@ -127,7 +127,7 @@ session_start();
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-
+                    <div class="topbar-divider d-none d-sm-block"></div>
                     
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
@@ -144,10 +144,10 @@ session_start();
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <!-- <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
-                                </a>
+                                </a> -->
             
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">
@@ -200,8 +200,8 @@ session_start();
 
                         <!-- Pie Chart -->
                        
-                        <div class="col-md-6 col-md-6 align-items-center">
-                            <div class="card shadow mb-4">
+                        <div class="col-md-7 col-md-7 align-items-center px-5">
+                            <div class="card shadow  border-left-danger mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div class="card shadow mb-4">
                                 <div class="card-header py-3">
@@ -211,16 +211,19 @@ session_start();
                                     <p><?php echo $row['isi']; ?></p>
                                     <p class="mb-0">Tanggal :  <?php echo $row['tanggal']; ?></p>
                                 </div>
+                                
                             </div>
                                 <!-- Card Body -->
             
                             </div>
+                            
                         </div>
-                    </div>
-
+                        
                     <?php
                            };
                     ?>
+                    </div>
+
 
                 </div>
                 <!-- /.container-fluid -->

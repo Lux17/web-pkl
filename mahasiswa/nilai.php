@@ -124,7 +124,7 @@ session_start();
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-
+                    <div class="topbar-divider d-none d-sm-block"></div>
                     
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
@@ -198,7 +198,7 @@ session_start();
                         <div class="col">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
-                                <div class="card shadow mb-4">
+                                <div class="card shadow border-left-danger mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Nilai</h6>
                                 </div>

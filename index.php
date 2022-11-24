@@ -29,7 +29,7 @@
 
 
    <!-- Template Main CSS File -->
- <link href="assets/css/styles1.css" rel="stylesheet">
+ <link href="assets/css/style.css" rel="stylesheet">
 
 
 </head>
@@ -67,7 +67,7 @@
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="zoom-out" data-aos-delay="200">
           <h1 >Sistem Informasi & Registrasi PKL Mahasiswa</h1>
-          <h2 >Mensukseskan program PKL mahasiswa</h2>
+          <h2 >Mensukseskan program PKL Mahasiswa</h2>
           <div >
             <div class="text-center text-lg-start">
               <a href="#" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
@@ -95,12 +95,12 @@
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-info">
             <a href="#" class="logo d-flex mb-3 align-items-center">
-              <!-- <img src="assets/img/logo.png" alt=""> -->
+          
         
               <span>Registrasi PKL</span>
         
             </a>
-            <p>Mensukseskan program PKL mahasiswa.</p>
+            <p>Mensukseskan program PKL Mahasiswa.</p>
             <div class="social-links mt-3">
 
               <a href="http://instagram.com/luckysptra__" class="instagram"><i class="bi bi-instagram"></i></a>
@@ -110,7 +110,7 @@
           </div>
 
           <div class="col-lg-2 col-6 footer-links">
- -->
+
           </div>
 
           <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">

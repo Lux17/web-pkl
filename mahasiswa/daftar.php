@@ -97,7 +97,7 @@
                 <span>Instansi</span></a>
         </li>
         <li class="nav-item ">
-            <a class="nav-link" href="Bimbingan.php">
+            <a class="nav-link" href="bimbingan.php">
                 <i class="fas fa-fw fa-user-friends   "></i>
                 <span>Bimbingan</span></a>
         </li>
@@ -341,6 +341,7 @@ $nim = $_SESSION['username'];
                                             <th>Nama Instansi</th>
                                             <th>Alamat Instansi</th>
                                             <th>NO HP Instansi</th>
+                                            <th>Status</th>
                                         
                                             <th></th>
                                         </tr>
@@ -356,6 +357,7 @@ $nim = $_SESSION['username'];
                                             <th>Nama Instansi</th>
                                             <th>Alamat Instansi</th>
                                             <th>NO HP Instansi</th>
+                                            <th>Status</th>
                                             <th></th>
                                         </tr>
                                     </tfoot>
@@ -389,6 +391,7 @@ $nim = $_SESSION['username'];
                                         <td><?php echo $row['nama_inst']; ?></td>
                                         <td><?php echo $row['alamat_inst']; ?></td>
                                         <td><?php echo $row['nohp_inst']; ?></td>
+                                        <td style="color: blue  "><?php echo $row['status']; ?></td>
                                         
        
                                         <td>

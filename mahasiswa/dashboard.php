@@ -177,6 +177,55 @@ session_start();
                             </div>
                         </div>
                         <?php
+                           $nim = $_SESSION['username'];
+                           $tampil= "Anda belum melakukan registrasi PKL silahkan registrasi terlebih dahulu dimenu registrasi.";
+                           // jalankan query untuk menampilkan semua data diurutkan berdasarkan 
+                           $query = "SELECT * FROM pengajuan where nim like $nim ";
+                           $result = mysqli_query($kon, $query);
+                           //mengecek apakah ada error ketika menjalankan query
+                           if(!$result){
+                               die ("Query Error: ".mysqli_errno($kon).
+                               " - ".mysqli_error($kon));
+                           }
+                           
+                           //buat perulangan untuk element tabel dari data mahasiswa
+                           $no = 1; //variabel untuk membuat nomor urut
+                           // hasil query akan disimpan dalam variabel $data dalam bentuk array
+                           // kemudian dicetak dengan perulangan while
+                         
+                           while($row = mysqli_fetch_assoc($result))
+                        //    var_dump($row);
+                           {
+                            
+                            
+                            if($row['status'] == 'Diproses'){
+                                $tampil = 'Anda sudah melakukan registrasi PKL Silahkan ke bagian TU untuk mengambil Surat pengajuan.';                           
+                            }elseif ($row['status'] == 'Teregistrasi'){
+                                $tampil = 'Anda Sudah Terdaftar PKL dan Siap melaksanakan PKL diindustri';
+                            };
+                                
+                           ?> 
+
+
+                            <?php
+                            
+                           };
+                          
+                            ?>
+     
+                        
+                            <div class="col-md-6 col-md-12 align-items-center">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div class="card shadow border-left-primary  mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary"><?php echo $tampil ?></h6>
+                                </div>
+                                <!-- <div class="card-body">
+                                
+                                </div> -->
+                            </div>
+                        <?php
                            
                            // jalankan query untuk menampilkan semua data diurutkan berdasarkan 
                            $query = "SELECT * FROM pengumuman ORDER BY id_pengumuman ASC";
@@ -194,6 +243,7 @@ session_start();
                            while($row = mysqli_fetch_assoc($result))
                            {
                            ?>
+
 
                         <!-- Pie Chart -->
                        

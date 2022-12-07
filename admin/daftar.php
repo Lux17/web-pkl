@@ -373,6 +373,7 @@
                                             <th>Nama Instansi</th>
                                             <th>Alamat Instansi</th>
                                             <th>NO HP Instansi</th>
+                                            <th>Status</th>
                                         
                                             <th></th>
                                         </tr>
@@ -391,6 +392,7 @@
                                             <th>Nama Instansi</th>
                                             <th>Alamat Instansi</th>
                                             <th>NO HP Instansi</th>
+                                            <th>Status</th>
                                             <th></th>
                                         </tr>
                                     </tfoot>
@@ -426,6 +428,7 @@
                                         <td><?php echo $row['nama_inst']; ?></td>
                                         <td><?php echo $row['alamat_inst']; ?></td>
                                         <td><?php echo $row['nohp_inst']; ?></td>
+                                        <td style="color:blue;"><?php echo $row['status']; ?></td>
                                         
        
                                         <td>

@@ -78,7 +78,7 @@ session_start();
                 <span>Instansi</span></a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" href="Bimbingan.php">
+            <a class="nav-link" href="bimbingan.php">
                 <i class="fas fa-fw fa-user-friends   "></i>
                 <span>Bimbingan</span></a>
         </li>

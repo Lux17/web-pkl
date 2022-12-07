@@ -37,10 +37,8 @@ if (isset($_POST['simpan'])) {
 
     $id = $_GET["id"];
 
-    //mengambil id yang ingin dihapus
-
-    //jalankan query DELETE untuk menghapus data
-    $query = "DELETE FROM pengajuan WHERE id_ajukan='$id' ";
+    $query  = "UPDATE pengajuan SET status ='Teregistrasi'";
+    $query .= "WHERE id_ajukan = '$id'";
     $hasil_query = mysqli_query($kon, $query);
 
     //periksa query, apakah ada kesalahan

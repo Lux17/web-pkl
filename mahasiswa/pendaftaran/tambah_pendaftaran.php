@@ -24,7 +24,7 @@ if (isset($_POST['simpan'])) {
         $alamat_inst = isset($_POST['alamat_inst']) ? $_POST['alamat_inst'] : '';
         $nohp_inst = isset($_POST['nohp_inst']) ? $_POST['nohp_inst'] : '';
         
-        $query = "INSERT INTO pengajuan(nama_mhs, nim, nohp_mhs,prodi,nama_pem, nohp_pem, nama_inst, alamat_inst,nohp_inst ) VALUES ('$nama_mhs', '$nim','$nohp_mhs', '$prodi','$nama_pem',  '$nohp_pem', '$nama_inst','$alamat_inst','$nohp_inst')";
+        $query = "INSERT INTO pengajuan(nama_mhs, nim, nohp_mhs,prodi,nama_pem, nohp_pem, nama_inst, alamat_inst,nohp_inst,status ) VALUES ('$nama_mhs', '$nim','$nohp_mhs', '$prodi','$nama_pem',  '$nohp_pem', '$nama_inst','$alamat_inst','$nohp_inst','Diproses')";
         $result = mysqli_query($kon, $query);
                           // periska query apakah ada error
         // $jumlah = mysqli_num_rows($result);
@@ -33,7 +33,7 @@ if (isset($_POST['simpan'])) {
             die ("Query gagal dijalankan: ".mysqli_errno($kon).
                                                " - ".mysqli_error($kon));
         } else {                      
-        echo "<script>alert('Data berhasil ditambah.');window.location='../daftar.php';</script>";
+        echo "<script>alert('Data berhasil ditambah.');window.location='../dashboard.php';</script>";
         }
                     
         
